@@ -24,11 +24,33 @@
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7">
                     <h2 class="pagetitle">[[*pagetitle]]</h2>
-                    <h3 class="subtitle">[[*eventDate:strtotime:date=`%e %b %Y`]]</h3>
-                    <div class="content">[[*content]]</div>
+                    <div class="content grid">
+                        [[getResources@fpRowED? &parents=`44` &tpl=`tagged-frame` &limit=`9`]]
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-5">
-                    <!-- [[$submenu]] -->
+                    <h3>Категории</h3>
+                    <ul class="nav nav-categories">
+                        [[getCategories]]
+                    </ul>
+                    
+                    <h3>Календарь</h3>
+                    <table class="calendar">
+                        <thead>
+                            <tr>
+                                <th>Пн</th>
+                                <th>Вт</th>
+                                <th>Ср</th>
+                                <th>Чт</th>
+                                <th>Пт</th>
+                                <th>Сб</th>
+                                <th>Вс</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            [[Calendar]]
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

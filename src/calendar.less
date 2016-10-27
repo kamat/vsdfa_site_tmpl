@@ -1,0 +1,20 @@
+table.calendar {
+  &, th, td {
+    border: 1px solid @my-gray-light;
+    text-align: center;
+  }
+  th, td {
+    padding: 3px;
+    width: 35px;
+    height: 35px;
+    &.out {
+      background-color: @my-gray-light;
+    }
+  }
+  td:nth-child(6), td:nth-child(7) {
+    background-color: @my-gray-lighter;
+    &.out {
+      background-color: @my-gray-light;
+    }
+  }
+}

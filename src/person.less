@@ -1,0 +1,91 @@
+.person-card {
+    .person-contacts {
+        abbr {
+            color: @bordo;
+            float: left;
+        }
+        .person-info {
+            padding-left: 25px;
+        }
+    }
+    .img-thumbnail {
+        margin-right: 15px;
+    }
+    .person-name {
+        display: block;
+        font-size: 1.3em;
+    }
+    hr {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        margin-right: 10px;
+    }
+}
+
+.person-bio {
+    margin-top: 15px;
+}
+
+
+.person-subordinates {
+  .toggle {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    &, &:hover, &:focus {
+      text-decoration: none;
+    }
+    &.collapsed {
+      margin-bottom: -32px;
+    }
+    &[aria-expanded=true]::before,
+    &[aria-expanded=true]::after {
+      background-color: @gray-blue;
+      content: "";
+      display: flex;
+      height: 2px;
+      width: 43%;
+    }
+    &[aria-expanded=true]::before {
+      margin-right: 15px;
+    }
+    &[aria-expanded=true]::after {
+      margin-left: 15px;
+    }
+  }
+  .collapsing.fade {
+    .transition-property(~"opacity, height, visibility");
+    .transition-duration(.15s);
+    .transition(opacity .05s linear);
+  }
+  .content {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    .item {
+      max-width: 100%;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+      position: relative;
+      margin-bottom: 20px;
+    }
+  }
+}

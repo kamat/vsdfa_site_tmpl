@@ -1,0 +1,101 @@
+.frame {
+  margin-bottom: 10px;
+  height: 325px;
+  width: 290px;
+  padding: 10px;
+
+  &.small {
+    height: 100px;
+    width: 200px;
+    padding: 4px;
+  }
+
+  &.medium {
+    height: 180px;
+    width: 180px;
+    padding: 5px;
+  }
+
+  &.faculty {
+    height: 70px;
+    width: 100%;
+    padding: 5px;
+    > a > .title {
+      display: inline-block;
+      margin: 0 0 0 5px;
+    }
+  }
+
+  &.event {
+    width: 100%;
+    height: 100px;
+    .date {
+      width: 4em;
+      border-radius: 3px;
+      background-color: @bordo;
+      padding: 1em;
+      float: left;
+      .day,
+      .month {
+        color: #fff;
+        text-align: center;
+        line-height: .8em;
+        display: block;
+      }
+      .day {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      .month {
+        padding-top: .3em;
+        font-size: .8em;
+      }
+    }
+    .description {
+      padding-left: 1em;
+      height: 4em;
+      overflow: hidden;
+      font-weight: bold;
+      color: @text-color;
+      &:hover,
+      &:focus {
+        color: @link-color;
+      }
+    }
+  }
+
+  .image {
+    position: relative;
+
+    .tag {
+      position: absolute;
+      bottom: 0;
+      padding: 3px 10px;
+      background-color: @bordo;
+      border-radius: 0 5px 0 0;
+      color: #fff;
+    }
+  }
+
+  .date {
+    padding: 5px 0;
+    color: @my-gray;
+  }
+
+  a {
+    display: block;
+    color: @text-color;
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      color: @bordo;
+      > .title {
+        color: @bordo;
+      }
+    }
+    .title {
+      color: @gray-blue;
+    }
+  }
+}
+

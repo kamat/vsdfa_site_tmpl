@@ -1,0 +1,257 @@
+@import "variables.less";
+//@import "bootstrap/less/variables.less";
+@import "bootstrap/less/bootstrap.less";
+@import "icons.less";
+@import "navbar.less";
+@import "owl.less";
+@import "frames.less";
+@import "person.less";
+
+.footer {
+  background:    @bordo;
+  padding-top:   15px;
+  padding-left:  40px;
+  padding-right: 40px;
+  margin-top:    20px;
+  address {
+    color: #fff;
+    a {
+      &,
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+  .menu {
+    > li > a {
+      &, &:focus, &:hover {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+    > li.first > a {
+      border-bottom: 1px solid #fff;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.header {
+  background: @bordo-light;
+  padding: 15px;
+  height: 150px;
+  .row {
+    background: @bordo;
+  }
+  .logo {
+    text-align: right;
+    //width: 180px;
+    a {
+      margin-top: 5px;
+      display: inline-block;
+      height: 110px;
+      width: 180px;
+      background: url("../img/main-spr.png") no-repeat scroll 0 0 transparent;
+      &:hover, &:focus {
+        opacity: .75;
+        filter: alpha(opacity=75);
+      }
+    }
+  }
+  .name {
+    @media (max-width: 1075px) {
+      display: none;
+    }
+    a {
+      margin-top: 20px;
+      display: inline-block;
+      height: 85px;
+      width: 390px;
+      background: url("../img/main-spr.png") no-repeat scroll -180px -20px transparent;
+      &:hover, &:focus {
+        opacity: .75;
+        filter: alpha(opacity=75);
+      }
+    }
+  }
+  .menu {
+    margin-top: 20px;
+  }
+}
+
+.front-page-row {
+  padding-left: 40px;
+  padding-right: 40px;
+  &:nth-child(odd) {
+    background-color: transparent;
+  }
+  &:nth-child(even) {
+    background-color: @my-gray-lighter;
+  }
+  h1, h2,h3,h4,h5,h6 {
+    color: @bordo;
+    &:hover, &:focus {
+      color: @bordo-light;
+    }
+  }
+}
+
+.btn-menu {
+  font-size: 18px;
+  color: #fff;
+  &:hover, &focus {
+    color: #fff;
+    opacity: .75;
+    filter: alpha(opacity=75);
+  }
+}
+
+.main-menu {
+  -webkit-box-shadow:	0px 7px 6px -2px rgba(148, 25, 43, 0.15);
+  -moz-box-shadow:	0px 7px 6px -2px rgba(148, 25, 43, 0.15);
+  box-shadow:		0px 7px 6px -2px rgba(148, 25, 43, 0.15);
+  margin-bottom: 10px;
+}
+
+.breaking-news {
+  margin-bottom: 15px;
+  height: 350px;
+  .carousel-indicators {
+    li {
+      border-color: @bordo;
+    }
+    .active {
+      background-color: @bordo;
+    }
+  }
+  .carousel-control {
+    width: 5%;
+  }
+  .carousel-inner,
+  .item,
+  .item a{
+    height: 100%;
+  }
+  .item a {
+    display: block;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.nav-block {
+  .tab-content {
+    padding-top: 10px;
+//    border-bottom: 1px solid @nav-tabs-border-color;
+    margin-bottom: 10px;
+  }
+  .nav-pills {
+    margin-bottom: 10px;
+    border-bottom: 1px solid @my-gray-light;
+    > li > a {
+      color: @text-color;
+      &:hover,
+      &:focus {
+        color: @my-gray;
+        background-color: @my-gray-lighter;
+        border-radius: 0;
+        border-bottom: 4px solid @my-gray-light;
+      }
+    }
+    > li.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: #fff;
+        background: @bordo-light;
+        border-radius: 0;
+        border-bottom: 4px solid @bordo;
+      }
+    }
+  }
+}
+
+.faculties {
+  .row div {
+    margin: 5px 0;
+  }
+}
+
+.event {
+  padding-bottom: 10px;
+  &, &:first-child {
+    margin-top: 10px;
+  }
+  .media-left {
+    background-color: @bordo;
+    border-radius: 10px;
+    padding: 10px;
+    &, .day, .month {
+      color: #fff;
+      line-height: 0.8em;
+    }
+    .day {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .month {
+      font-size: 0.8em;
+    }
+  }
+  .media-body {
+    padding-left: 10px;
+  }
+}
+
+.submenu {
+  li {
+    a {
+      text-decoration: none;
+      display: block;
+      padding: @nav-link-padding;
+      &:focus, &:hover {
+        background-color: @nav-link-hover-bg;
+        text-decoration: none;
+      }
+    }
+  }
+  .parent {
+    ul {
+      display: none;
+    }
+    &.active ul {
+      display: block;
+      border-left: 3px solid @bordo;
+      padding-left: 10px;
+    }
+  }
+  .active {
+    a {
+      &, &:focus, &:hover {
+        background-color: @bordo;
+        color: #fff;
+      }
+    }
+    ul {
+      background-color: @nav-link-hover-bg;
+      & > li > a {
+        background-color: @nav-link-hover-bg;
+        color: @link-color;
+      }
+    }
+  }
+}
+
+.pagetitle { margin-top: 0; }
+
+.raise {
+    margin-top: -25px;
+    .upright {
+        position: relative;
+        top: -25px;
+        left: 90%;
+    }
+}

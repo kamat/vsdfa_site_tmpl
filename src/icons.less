@@ -1,0 +1,69 @@
+.icon {
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  &.small {
+    width: 60px;
+    height: 60px;
+  }
+  &.round {
+    background-color: @gray-blue;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: bold;
+    color: #fff;
+    &:hover,
+    &:focus {
+      background-color: @bordo;
+    }
+  }
+}
+
+.icon-tmpl(@name) {
+  .icon-@{name} {
+    background-image: url('../img/icons/@{name}1.png');
+    &:hover, &:focus,
+    a:hover &, a:focus & {
+      background-image: url('../img/icons/@{name}.png');
+    }
+  }
+}
+
+.icon-tmpl(algoritm);
+.icon-tmpl(book1);
+.icon-tmpl(book2);
+.icon-tmpl(book3);
+.icon-tmpl(book4);
+.icon-tmpl(campus);
+.icon-tmpl(day);
+.icon-tmpl(days);
+.icon-tmpl(department);
+.icon-tmpl(department2);
+.icon-tmpl(dokum);
+.icon-tmpl(edu_paid);
+.icon-tmpl(edu_program);
+.icon-tmpl(faq);
+.icon-tmpl(kol_mest);
+.icon-tmpl(library);
+.icon-tmpl(podgotovka);
+.icon-tmpl(portal);
+.icon-tmpl(preimusch);
+.icon-tmpl(prikaz);
+.icon-tmpl(private);
+.icon-tmpl(rating);
+.icon-tmpl(results);
+.icon-tmpl(schedule);
+.icon-tmpl(schedule2);
+.icon-tmpl(sroki);
+.icon-tmpl(target);
+.icon-tmpl(vopros);
+.icon-tmpl(vst_isp);
+.icon-tmpl(zajavlenie);

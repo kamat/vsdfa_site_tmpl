@@ -1,0 +1,11 @@
+@mixin(@a) {
+  .icon-portal,
+    background-image: url('../img/@{a}1.png');
+  }
+  .icon-portal:focus,
+  .icon-portal:hover,
+  a:focus .icon-portal,
+  a:hover .icon-portal {
+    background-image: url('../img/@{a}.png');
+  }
+}

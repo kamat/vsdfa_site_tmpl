@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        [[$htmlHead]]
+    </head>
+    <body>
+        <!-- TOP MENU -->
+        [[$top-menu]]
+        <!-- TOP MENU -->
+
+        <!-- HEADER -->
+        [[$header]]
+        <!-- /HEADER -->
+
+        <!-- MAIN MENU (dropdown) -->
+        [[$main-menu]]
+        <!-- /MAIN MENU -->
+
+        <!-- CONTENT -->
+        <div class="container-fluid main">
+            <!-- BREADCRUMBS -->
+            [[$breadcrumbs]]
+            <!-- /BREADCRUMBS -->
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-7">
+                    <h2 class="pagetitle">[[*pagetitle]]</h2>
+                    <h3 class="subtitle">[[*eventDate:strtotime:date=`%e %b %Y`]]</h3>
+                    <div class="content">[[*content]]</div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-5">
+                    <!-- [[$submenu]] -->
+                </div>
+            </div>
+        </div>
+        <!-- /CONTENT -->
+        
+        <!-- FOOTER -->
+        [[$footer]]
+        <!-- /FOOTER -->
+
+        <div class="test">
+            <span class="visible-lg btn btn-success">LG</span>
+            <span class="visible-md btn btn-success">MD</span>
+            <span class="visible-sm btn btn-success">SM</span>
+            <span class="visible-xs btn btn-success">XS</span>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="assets/templates/kama/js/bootstrap.min.js"></script>
+        <script src="assets/templates/kama/js/holder.min.js"></script>
+    </body>
+</html>

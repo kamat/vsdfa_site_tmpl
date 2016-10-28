@@ -7,7 +7,7 @@ if (!is_object($results)) {
 } else {
   while ($r = $results->fetch(PDO::FETCH_ASSOC)) {
     $val = $r['value'];
-    $output .= "<li><a href=\"#\" data-filter-by=\"category\">$val</a></li>";
+    $output .= "<li><a href=\"#\" data-filter-by=\"category\" data-filter=\"$val\">$val</a></li>";
   }
 }
 return $output;

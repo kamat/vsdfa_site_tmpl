@@ -24,19 +24,34 @@
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7">
                     <h2 class="pagetitle">[[*pagetitle]]</h2>
-                    <div class="content grid">
-                        [[getResources@fpRowED? &parents=`44` &tpl=`tagged-frame` &limit=`9`]]
+                    <div class="content grid" id="pages" data-type="news" data-limit="9" data-offset="9" data-next-page="2">
+                        <div class="page clearfix" data-page="1">
+                            [[getResources@fpRowED? &parents=`44` &tpl=`tagged-frame` &limit=`9` &offset=`0`]]
+                        </div>
+                    </div>
+                    <div class="clearfix text-center">
+                        <a class="more btn btn-primary" href="#">
+                            Показать ещё &gt;&gt;
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-5">
+                    <a href="#" id="reset-filters" class="btn btn-default">
+                        Сбросить фильтры
+                    </a>
                     <h3>Категории</h3>
                     <ul class="nav nav-categories">
-                        [[getCategories]]
+                        [[!getCategories]]
                     </ul>
                     
                     <h3>Календарь</h3>
                     <table class="calendar">
                         <thead>
+                            <tr>
+                                <th><a href="#">&lt</a></th>
+                                <th colspan="5" class="month">Month Year</th>
+                                <th><a href="#">&gt</a></th>
+                            </tr>
                             <tr>
                                 <th>Пн</th>
                                 <th>Вт</th>
@@ -48,7 +63,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            [[Calendar]]
+                            [[!Calendar]]
                         </tbody>
                     </table>
                 </div>
@@ -65,5 +80,6 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/templates/kama/js/bootstrap.min.js"></script>
         <script src="assets/templates/kama/js/holder.min.js"></script>
+        <script src="assets/templates/kama/js/filter.js"></script>
     </body>
 </html>

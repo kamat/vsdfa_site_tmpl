@@ -24,11 +24,8 @@
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7">
                     <h2 class="pagetitle">[[*pagetitle]]</h2>
-                    <div class="content grid" id="pages" data-type="news" data-limit="9" data-offset="9" data-next-page="2">
-                        <div class="page clearfix" data-page="1">
-                            [[getResources@fpRowED? &parents=`44` &tpl=`tagged-frame` &limit=`9` &offset=`0`]]
-                        </div>
-                    </div>
+                    <div class="content">[[*content]]</div>
+                    <div class="content grid" id="pages" data-type="[[*mediaType]]"></div>
                     <div class="clearfix text-center">
                         <a class="more btn btn-primary" href="#">
                             Показать ещё &gt;&gt;
@@ -39,8 +36,13 @@
                     <a href="#" id="reset-filters" class="btn btn-default">
                         Сбросить фильтры
                     </a>
+
+                    [[*mediaType:is=`anons`:then=`<a href="#" class="btn btn-default" data-filter-by="archive" data-filter="0">
+                        Архив
+                    </a>`]]
+                    
                     <h3>Категории</h3>
-                    <ul class="nav nav-categories">
+                    <ul class="nav nav-pills nav-stacked">
                         [[!getCategories]]
                     </ul>
                     

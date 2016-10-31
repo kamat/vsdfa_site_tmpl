@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        [[$htmlHead]]
+    </head>
+    <body>
+        <!-- TOP MENU -->
+        [[$top-menu]]
+        <!-- TOP MENU -->
+
+        <!-- HEADER -->
+        [[$header]]
+        <!-- /HEADER -->
+
+        <!-- MAIN MENU (dropdown) -->
+        [[$main-menu]]
+        <!-- /MAIN MENU -->
+
+        <!-- CONTENT -->
+        <div class="container-fluid main">
+            <!-- BREADCRUMBS -->
+            [[$breadcrumbs]]
+            <!-- /BREADCRUMBS -->
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-7">
+                    <h2 class="pagetitle">
+                        [[*pagetitle]]
+                    </h2>
+                    <img src="[[*thumbnail]]" class="img-responsive">
+                    <div class="content">
+                        [[*content]]
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-5">
+                    [[Wayfinder? &startId=`[[*parent]]` &level=`1` &outerClass=`submenu list-unstyled` &innerClass=`list-unstyled` &parentClass=`parent`]]
+                </div>
+            </div>
+        </div>
+        <!-- /CONTENT -->
+        
+        <!-- FOOTER -->
+        [[$footer]]
+        <!-- /FOOTER -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="assets/templates/kama/js/bootstrap.min.js"></script>
+        <script src="assets/templates/kama/js/holder.min.js"></script>
+    </body>
+</html>

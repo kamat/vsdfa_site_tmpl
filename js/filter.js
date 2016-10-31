@@ -1,26 +1,21 @@
 $(document).ready(function(){
-    $('[data-filter-by=category]').click(function(){
-        console.log("Filter by category: " + $(this).data('filter'));
-        var filter = $(this).data('filter');
-        $('#pages').data('category', filter);
-        $("#pages").html('');
-        $('#pages').data('next-page', 1);
-        $('#pages').data('offset', 0);
-        $('#reset-filters').show();
-
-        loadPage();
-        return false;
-    });
-    $('[data-filter-by=date]').click(function(){
-        console.log("Filter by date: " + $(this).data('filter'));
-        var filter = $(this).data('filter');
-        $('#pages').data('date', filter);
-        $("#pages").html('');
-        $('#pages').data('next-page', 1);
-        $('#pages').data('offset', 0);
-        $('#reset-filters').show();
-
-        loadPage();
+    $('[data-filter-by]').click(function(){
+        if ($(this).data('filter-by') == 'archive') {
+            var current = $(this).data('filter');
+            $(this).data('filter', !current);
+            if ($(this).hasClass('btn-default')) {
+                $(this).removeClass('btn-default');
+                $(this).addClass('btn-primary');
+            } else if ($(this).hasClass('btn-primary')) {
+                $(this).removeClass('btn-primary');
+                $(this).addClass('btn-default');
+            } else {
+                console.log('Fuck it!');
+            }
+        }
+        config = $(this).data();
+        console.log("Filter by " + config.filterBy + ": " + config.filter);
+        applyFilter(config.filterBy, config.filter);
         return false;
     });
     $('.more').click(function(){
@@ -36,13 +31,34 @@ $(document).ready(function(){
         $('#pages').data('date', '');
         $('#pages').data('next-page', 1);
         $('#pages').data('offset', 0);
+        $('#pages').data('archive', 0);
         $('#reset-filters').hide();
 
         loadPage();
         return false;
     });
     $('#reset-filters').hide();
+    
+    if (location.hash) {
+        var category = location.hash.substring(1);
+        $('[data-filter-by=category][data-filter=' + category + ']').click();
+    } else {
+        loadPage();
+    }
 });
+
+function applyFilter(filter, value) {
+    $('#pages').data(filter, value);
+    $("#pages").html('');
+    $('#pages').data('next-page', 1);
+    $('#pages').data('offset', 0);
+    $('#reset-filters').show();
+    
+    $('[data-filter-by=' + filter + ']').parent().removeClass('active');
+    $('[data-filter-by=' + filter + '][data-filter=' + value + ']').parent().addClass('active');
+    
+    loadPage();
+}
 
 function loadPage() {
     var config = $('#pages').data();
@@ -57,4 +73,4 @@ function loadPage() {
         $('#pages').data('next-page', config.page + 1);
         $('#pages').data('offset', config.offset);
     });
-};
+}

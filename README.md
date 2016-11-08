@@ -1,0 +1,5 @@
+REQUIREMENTS
+============
+
+ * Bootstrap
+ * FancyBox

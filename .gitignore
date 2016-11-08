@@ -1,4 +1,6 @@
 **/tmp
 **/node_modules
+**/fancyBox
+**/fancybox
 /src/bootstrap
 /css

@@ -24,13 +24,31 @@
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7">
                     <h2 class="pagetitle">[[*pagetitle]]</h2>
-                    <h3 class="subtitle">[[*eventDate:strtotime:date=`%e %b %Y`]]</h3>
                     <div class="content">[[*content]]</div>
+                    <div class="child_tabs">
+                        <ul class="nav nav-tabs" role="tablist">
+                            [[getResources? &parents=`[[*id]]`
+                                &tpl=`tab-link`
+                                &where=`{"template:=":17}`
+                                &showHidden=`1`
+                                &sortby=`menuindex`
+                                &sortdir=`ASC`
+                            ]]
+                        </ul>
+                        <div class="tab-content">
+                            [[getResources? &parents=`[[*id]]`
+                                &tpl=`tab-pane`
+                                &where=`{"template:=":17}`
+                                &showHidden=`1`
+                                &includeContent=`1`
+                                &sortby=`menuindex`
+                                &sortdir=`ASC`
+                            ]]
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-5">
-                    <ul class="nav">
-                        [[!getCategories? &url=`[[~[[*parent]]]]`]]
-                    </ul>
+                    [[$submenu]]
                 </div>
             </div>
         </div>
@@ -45,5 +63,16 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/templates/kama/js/bootstrap.min.js"></script>
         <script src="assets/templates/kama/js/holder.min.js"></script>
+
+        <script>
+            $( document ).ready(function() {
+                if (location.hash) {
+                    $('.child_tabs .nav a[href="' + location.hash + '"]').tab('show');
+                } else {
+                    $('.child_tabs .nav a:first').tab('show');
+                }
+            });
+        </script>
+
     </body>
 </html>

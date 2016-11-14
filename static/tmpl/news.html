@@ -24,10 +24,19 @@
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7">
                     <h2 class="pagetitle">[[*pagetitle]]</h2>
-                    <h3 class="subtitle">[[*eventDate:strtotime:date=`%e %b %Y`]]</h3>
+                    <h4>
+                        <span class="label label-danger">
+                            [[*category:getCategory]]
+                        </span>
+                        <small>
+                            <i class="glyphicon glyphicon-time"></i>
+                            [[*eventDate]]
+                        </small>
+                    </h4>
                     <div class="content">[[*content]]</div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-5">
+                    <h3>Категории</h3>
                     <ul class="nav">
                         [[!getCategories? &url=`[[~[[*parent]]]]`]]
                     </ul>

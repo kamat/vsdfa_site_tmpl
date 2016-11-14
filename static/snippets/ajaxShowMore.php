@@ -47,7 +47,7 @@ switch ($type) {
         }
 
         $config = array(
-            'tpl' => 'tagged-frame',
+            'tpl' => 'event-frame-panel-gr',
             'limit' => $limit,
             'offset' => $offset,
             'parents' => '188',

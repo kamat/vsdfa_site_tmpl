@@ -23,22 +23,11 @@
             <!-- /BREADCRUMBS -->
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7">
-                    <h2 class="pagetitle">
-                        [[*pagetitle]]
-                        <span class="label label-danger">[[*category]]</span>
-                    </h2>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <img src="[[pthumb? &input=`[[*thumbnail]]` &options=`h=180&w=270&zc=c`]]" class="img-thumbnail">
-                        </div>
-                        <div class="col-sm-8">
-                            <h3 class="subtitle">Начало: [[*startDate]]</h3>
-                            <h3 class="subtitle">Конец: [[*endDate]]</h3>
-                        </div>
-                    </div>
+                    [[$event-frame-panel]]
                     <div class="content">[[*content]]</div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-5">
+                    <h3>Категории</h3>
                     <ul class="nav">
                         [[!getCategories? &url=`[[~[[*parent]]]]`]]
                     </ul>

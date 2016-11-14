@@ -1,16 +1,18 @@
 <?php
+$input  = (isset($input)) ? $input : 'none';
 $output = '';
 $result = $modx->getObject('modTemplateVar', 3);
+$categories = array();
 
-if (!is_object($result)) {
-    $output = '<li>Нет категорий</li>';
-} else {
+if (is_object($result)) {
     $elements = explode('||',$result->get('elements'));
     foreach($elements as $element) {
         $e = explode('==', $element);
         list($title,$val) = $e;
-        $output .= "<li><a href=\"$url#$val\" data-filter-by=\"category\" data-filter=\"$val\">$title</a></li>";
+        $categories[$val] = $title;
     }
+    $output = $categories[$input];
 }
 
+$output = ($output) ? $output : 'Без категории';
 return $output;

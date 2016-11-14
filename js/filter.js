@@ -3,15 +3,7 @@ $(document).ready(function(){
         if ($(this).data('filter-by') == 'archive') {
             var current = $(this).data('filter');
             $(this).data('filter', !current);
-            if ($(this).hasClass('btn-default')) {
-                $(this).removeClass('btn-default');
-                $(this).addClass('btn-primary');
-            } else if ($(this).hasClass('btn-primary')) {
-                $(this).removeClass('btn-primary');
-                $(this).addClass('btn-default');
-            } else {
-                console.log('Fuck it!');
-            }
+            $(this).hide();
         }
         config = $(this).data();
         console.log("Filter by " + config.filterBy + ": " + config.filter);
@@ -32,13 +24,14 @@ $(document).ready(function(){
         $('#pages').data('next-page', 1);
         $('#pages').data('offset', 0);
         $('#pages').data('archive', 0);
+        $('a[data-filter-by=archive]').show();
         $('#reset-filters').hide();
 
         loadPage();
         return false;
     });
     $('#reset-filters').hide();
-    
+
     if (location.hash) {
         var category = location.hash.substring(1);
         $('[data-filter-by=category][data-filter=' + category + ']').click();
@@ -53,10 +46,10 @@ function applyFilter(filter, value) {
     $('#pages').data('next-page', 1);
     $('#pages').data('offset', 0);
     $('#reset-filters').show();
-    
+
     $('[data-filter-by=' + filter + ']').parent().removeClass('active');
     $('[data-filter-by=' + filter + '][data-filter=' + value + ']').parent().addClass('active');
-    
+
     loadPage();
 }
 

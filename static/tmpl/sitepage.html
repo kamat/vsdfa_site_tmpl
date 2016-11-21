@@ -23,14 +23,11 @@
             <!-- /BREADCRUMBS -->
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7">
-                    [[$event-frame-panel]]
+                    <h2 class="pagetitle">[[*pagetitle]]</h2>
                     <div class="content">[[*content]]</div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-5">
-                    <h3>Категории</h3>
-                    <ul class="nav">
-                        [[!getCategories? &url=`[[~[[*parent]]]]`]]
-                    </ul>
+                    [[$submenu]]
                 </div>
             </div>
         </div>

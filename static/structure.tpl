@@ -1,13 +1,16 @@
-[[getResources?
-    &where=`{"id:=":70}`
+[[!getResources?
+    &where=`{"template:=":14}`
+    &parents=`[[*id]]`
     &tpl=`structure-boss-only`
     &includeTVs=`1`
+    &processTVs=`1`
     &sortby=`menuindex`
     &sortdir=`ASC`
     &depth=`1`
+    &limit=`1`
 ]]
 
-[[getResources?
+[[!getResources?
     &where=`{"template:=":8}`
     &parents=`[[*id]]`
     &tpl=`structure-boss`

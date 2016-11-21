@@ -25,7 +25,7 @@
                 <div class="col-lg-9 col-md-8 col-sm-7">
                     <h2 class="pagetitle">[[*pagetitle]]</h2>
                     <div class="content">[[*content]]</div>
-                    <div class="content grid" id="pages" data-type="[[*mediaType]]"></div>
+                    <div class="content grid" id="pages" data-type="[[*mediaType]]" data-department="[[*department]]"></div>
                     <div class="clearfix text-center">
                         <a class="more btn btn-primary" href="#">
                             Показать ещё &gt;&gt;
@@ -47,27 +47,8 @@
                     </ul>
                     
                     <h3>Календарь</h3>
-                    <table class="calendar">
-                        <thead>
-                            <tr>
-                                <th><a href="#">&lt</a></th>
-                                <th colspan="5" class="month">Month Year</th>
-                                <th><a href="#">&gt</a></th>
-                            </tr>
-                            <tr>
-                                <th>Пн</th>
-                                <th>Вт</th>
-                                <th>Ср</th>
-                                <th>Чт</th>
-                                <th>Пт</th>
-                                <th>Сб</th>
-                                <th>Вс</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            [[!Calendar]]
-                        </tbody>
-                    </table>
+                    <div class="calendar">
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,11 +58,11 @@
         [[$footer]]
         <!-- /FOOTER -->
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="assets/templates/kama/js/bootstrap.min.js"></script>
-        <script src="assets/templates/kama/js/holder.min.js"></script>
+        [[$footerJs]]
+
+        <!-- JqUI -->
+        <script src="assets/templates/kama/js/datepicker.js"></script>
+        <script src="assets/templates/kama/js/datepicker-ru.js"></script>
         <script src="assets/templates/kama/js/filter.js"></script>
     </body>
 </html>

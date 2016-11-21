@@ -1,16 +1,18 @@
 <?php
-$type     = $modx->getOption('type',     $_POST, '');
-$category = $modx->getOption('category', $_POST, false);
-$date     = $modx->getOption('date',     $_POST, false);
-$page     = $modx->getOption('nextPage', $_POST, 1);
-$limit    = $modx->getOption('limit',    $_POST, 9);
-$offset   = $modx->getOption('offset',   $_POST, 0);
-$archive  = $modx->getOption('archive',  $_POST, false);
+$type       = $modx->getOption('type',     $_POST, '');
+$category   = $modx->getOption('category', $_POST, false);
+$department = $modx->getOption('department', $_POST, false);
+$date       = $modx->getOption('date',     $_POST, false);
+$page       = $modx->getOption('nextPage', $_POST, 1);
+$limit      = $modx->getOption('limit',    $_POST, 9);
+$offset     = $modx->getOption('offset',   $_POST, 0);
+$archive    = $modx->getOption('archive',  $_POST, false);
 
 $newOffset = $limit + $offset;
 
 $filterTV = array();
-if ($category) $filterTV[] = "category===$category";
+if ($category)   $filterTV[] = "category===$category";
+if ($department) $filterTV[] = "department===$department";
 
 switch ($type) {
     case 'news':

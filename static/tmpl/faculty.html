@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        [[$htmlHead]]
+    </head>
+    <body>
+        <!-- TOP MENU -->
+        [[$top-menu]]
+        <!-- TOP MENU -->
+
+        <!-- HEADER -->
+        [[$header]]
+        <!-- /HEADER -->
+
+        <!-- MAIN MENU (dropdown) -->
+        [[$main-menu]]
+        <!-- /MAIN MENU -->
+
+        <!-- CONTENT -->
+        <div class="container-fluid main">
+            <!-- BREADCRUMBS -->
+            [[$breadcrumbs]]
+            <!-- /BREADCRUMBS -->
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-7">
+                    <h2 class="pagetitle">[[*pagetitle]]</h2>
+                    [[!getResources@EmployeesList? &limit=`1` &tpl=`employee_gr` &depth=`1`]]
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#about" aria-controls="about" role="tab" data-toggle="tab">
+                                О факультете
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#history" aria-controls="history" role="tab" data-toggle="tab">
+                                История
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#edu-wrk" aria-controls="edu-wrk" role="tab" data-toggle="tab">
+                                Воспитательная работа
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#chairs" aria-controls="chairs" role="tab" data-toggle="tab">
+                                Кафедры
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="about">
+                            [[*content]]
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="history">
+                            [[*history]]
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="edu-wrk">
+                            [[*edu-wrk]]
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="chairs">
+                            [[Wayfinder?
+                                &startId=`[[*id]]`
+                                &level=`1`
+                                &outerClass=`nav`
+                                &innerClass=`list-unstyled`
+                                &where=`{"template:=": "19"}`
+                            ]]
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-5">
+                    [[Wayfinder?
+                        &startId=`[[*parent]]`
+                        &level=`1`
+                        &outerClass=`nav`
+                        &innerClass=`list-unstyled`
+                    ]]
+                    <hr>
+                    [[Wayfinder?
+                        &startId=`[[*id]]`
+                        &level=`1`
+                        &outerClass=`nav`
+                        &innerClass=`list-unstyled`
+                        &where=`{"template:!=": "19"}`
+                    ]]
+                </div>
+            </div>
+        </div>
+        <!-- /CONTENT -->
+        
+        <!-- FOOTER -->
+        [[$footer]]
+        <!-- /FOOTER -->
+
+        [[$footerJs]]
+    </body>
+</html>

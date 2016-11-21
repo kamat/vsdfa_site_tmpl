@@ -1,5 +1,7 @@
 [[FormIt?
-    &hooks=`recaptcha,email,FormItSaveForm`
+    &hooks=`recaptchav2,email,FormItSaveForm`
+    &recaptchaTheme=`dark`
+    &recaptchaJs=`{size: "compact"}`
     &emailTo=`dirportal@molochnoe.ru`
     &emailSubject=`Отправка формы onlineReception`
     &emailTpl=`emailOR`
@@ -85,12 +87,16 @@
     </div>
     
     <div class="form-group">
-        [[+formit.recaptcha_html]]
-        [[!+fi.error.recaptcha]]
+        <div class="col-sm-9 col-sm-offset-3">
+            [[!recaptchav2_render]]
+            [[!+fi.error.recaptchav2_error]]
+        </div>
     </div>
     
     <div class="form-actions">
-        <button type="submit" class="btn btn-main" name="submit" id="submit">Отправить</button>
+        <div class="col-sm-9 col-sm-offset-3">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" name="submit" id="submit">Отправить</button>
+        </div>
     </div>
 
 </form>

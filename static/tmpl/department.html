@@ -23,14 +23,21 @@
             <!-- /BREADCRUMBS -->
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7">
-                    [[$event-frame-panel]]
-                    <div class="content">[[*content]]</div>
+                    <h2 class="pagetitle">[[*pagetitle]]</h2>
+                    [[getResources@EmployeesList? &limit=`1` &tpl=`employee_gr`]]
+                    <div class="content">
+                        [[*content]]
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-5">
-                    <h3>Категории</h3>
-                    <ul class="nav">
-                        [[!getCategories? &url=`[[~[[*parent]]]]`]]
-                    </ul>
+                    [[Wayfinder?
+                        &startId=`[[*parent]]`
+                        &level=`2`
+                        &where=`{"template:!=": 19}`
+                        &outerClass=`submenu list-unstyled`
+                        &innerClass=`list-unstyled`
+                        &parentClass=`parent`
+                    ]]
                 </div>
             </div>
         </div>

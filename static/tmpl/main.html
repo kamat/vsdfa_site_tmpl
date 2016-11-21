@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    [[$htmlHead]]
+  </head>
+  <body>
+    <!-- TOP MENU -->
+    [[$top-menu]]
+    <!-- TOP MENU -->
+
+    <!-- HEADER -->
+    [[$header]]
+    <!-- /HEADER -->
+
+    <!-- MAIN MENU (dropdown) -->
+    [[$main-menu]]
+    <!-- /MAIN MENU -->
+    
+    <!-- SLIDER -->
+    [[$breaking-news]]
+    <!-- /SLIDER -->
+    
+    <!-- NEWS -->
+    [[$news]]
+    <!-- /NEWS -->
+
+    <!-- FACULTIES -->
+    [[$faculties]]
+    <!-- /FACULTIES -->
+
+    <!-- ABIRURIENT -->
+    [[$abiturient]]
+    <!-- /ABIRURIENT -->
+
+    <!-- STUDENT -->
+    [[$student]]
+    <!-- /STUDENT -->
+
+    <!-- BANNERS -->
+    [[$banners]]
+    <!-- /BANNERS -->
+
+    <!-- FOOTER -->
+    [[$footer]]
+    <!-- /FOOTER -->
+
+    [[$footerJs]]
+    
+    <!-- OWL -->
+    <script src="assets/templates/kama/js/owl.carousel.min.js"></script>
+    <script>
+        $(".owl-carousel").owlCarousel({
+            lazyLoad: true,
+            loop: true,
+            center: true,
+            itemsScaleUp: true,
+            navigation: true,
+            navigationText: [
+                '<i class="glyphicon glyphicon-chevron-left"></i>',
+                '<i class="glyphicon glyphicon-chevron-right"></i>'
+            ],
+            responsive: true,
+            
+        });
+        //imagesCustom: [ [0, 1], [700, 2], [1000, 3], [1300, 4], [1600, 5] ]
+        $(".owl-carousel-200").owlCarousel({
+            lazyLoad: true,
+            loop: true,
+            center: true,
+            itemsScaleUp: true,
+            navigation: true,
+            navigationText: [
+                '<i class="glyphicon glyphicon-chevron-left"></i>',
+                '<i class="glyphicon glyphicon-chevron-right"></i>'
+            ],
+            responsive: true,
+            //imagesCustom: [ [0, 1], [700, 2], [1000, 3], [1300, 4], [1600, 5] ]
+        });
+    </script>
+  </body>
+</html>

@@ -8,53 +8,61 @@
         <div class="person-card">
             <div class="row">
                 <div class="col-sm-3 col-md-2">
-                    <img src="[[pthumb? &input=`[[+tv.photo]]` &options=`h=200&w=150&zc=t`]]" class="img-thumbnail" title="[[+pagetitle]]" alt="[[+pagetitle]]">
+                    <img src="[[pthumb? &input=`[[getField? &id=`[[+id]]` &field=`photo`]]` &options=`h=200&w=150&zc=t`]]" class="img-thumbnail" title="[[+pagetitle]]" alt="[[+pagetitle]]">
                 </div>
                 <div class="col-sm-9 col-md-10">
                     <div class="row">
                         <div class="person-pos col-md-4">
                             <dl>
                                 <dt>Должность:</dt>
-                                <dd>[[+tv.position:striptags=``]]</dd>
+                                <dd>[[getField? &id=`[[+id]]` &field=`position`]]</dd>
+                                [[getField? &id=`[[+id]]` &field=`degree` &tpl=`@INLINE 
+                                    <dt>Учёная степень:</dt>
+                                    <dd>[[+gf.output]]</dd>
+                                `]]
+                                [[getField? &id=`[[+id]]` &field=`rank` &tpl=`@INLINE 
+                                    <dt>Учёное звание:</dt>
+                                    <dd>[[+gf.output]]</dd>
+                                `]]
                             </dl>
                         </div>
                         <div class="person-contacts col-md-7">
                             <ul class="list-unstyled">
-                                [[+tv.email:notempty=`
+                                [[getField? &id=`[[+id]]` &field=`email` &tpl=`@INLINE 
                                     <li class="clearfix">
                                         <abbr title="Email">
                                             <i class="glyphicon glyphicon-envelope"></i>
                                         </abbr>
                                         <div class="person-info">
-                                            <a href="mailto:[[+tv.email]]">
-                                                [[+tv.email]]
+                                            <a href="mailto:[[+gf.output]]">
+                                                [[+gf.output]]
                                             </a>
                                         </div>
                                     </li>`
                                 ]]
-                                [[+tv.phone:notempty=`
+                                [[getField? &id=`[[+id]]` &field=`phone` &tpl=`@INLINE 
                                     <li class="clearfix">
                                         <abbr title="Телефон">
                                             <i class="glyphicon glyphicon-earphone"></i>
                                         </abbr>
-                                        <div class="person-info">[[+tv.phone]]</div>
+                                        <div class="person-info">[[+gf.output]]</div>
                                     </li>`
                                 ]]
-                                [[+tv.address:notempty=`
+                                [[getField? &id=`[[+id]]` &field=`address` &tpl=`@INLINE 
                                     <li class="clearfix">
                                         <abbr title="Адрес">
                                             <i class="glyphicon glyphicon-map-marker"></i>
                                         </abbr>
-                                        <div class="person-info">[[+tv.address]]</div>
+                                        <div class="person-info">[[+gf.output]]</div>
                                     </li>`
                                 ]]
-                                [[+tv.WorkingHours:notempty=`
+                                [[getField? &id=`[[+id]]` &field=`WorkingHours` &tpl=`@INLINE 
                                     <li class="clearfix">
                                         <abbr title="Часы работы">
                                             <i class="glyphicon glyphicon-time"></i>
                                         </abbr>
                                         <div class="person-info">
-                                            [[+tv.WorkingHours]]
+                                            [[+gf.output]]
                                         </div>
                                     </li>`
                                 ]]
@@ -77,19 +85,10 @@
             </div>
         </div>
         [[+tv.sticky:is=`1`:then=`
-            <div class="person-subordinates">
-                <a href="#subordinates" class="toggle collapsed" data-toggle="collapse">
-                    <span class="btn btn-primary">
-                        Сотрудники
-                        <span class="caret"></span>
-                    </span>
-                </a>
-                <div class="collapse fade" id="subordinates">
-                    <div class="content">
-                        [[getResources@SubordinatesList? &parents=`[[+parent]]`]]
-                    </div>
-                </div>
-            </div>
+            [[getResources@SubordinatesList?
+                &tplWrapper=`subordinates_gr`
+                &parents=`[[+parent]]`
+            ]]
         `]]
     </div>
 </div>

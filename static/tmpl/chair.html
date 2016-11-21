@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        [[$htmlHead]]
+    </head>
+    <body>
+        <!-- TOP MENU -->
+        [[$top-menu]]
+        <!-- TOP MENU -->
+
+        <!-- HEADER -->
+        [[$header]]
+        <!-- /HEADER -->
+
+        <!-- MAIN MENU (dropdown) -->
+        [[$main-menu]]
+        <!-- /MAIN MENU -->
+
+        <!-- CONTENT -->
+        <div class="container-fluid main">
+            <!-- BREADCRUMBS -->
+            [[$breadcrumbs]]
+            <!-- /BREADCRUMBS -->
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-7">
+                    <h2 class="pagetitle">[[*pagetitle]]</h2>
+                    [[getResources@EmployeesList? &limit=`1` &tpl=`employee_gr`]]
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#about" aria-controls="about" role="tab" data-toggle="tab">
+                                О кафедре
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#history" aria-controls="history" role="tab" data-toggle="tab">
+                                История
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="about">
+                            [[*content]]
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="history">
+                            [[*history]]
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-5">
+                    [[Wayfinder? &startId=`[[*id]]` &level=`1` &outerClass=`nav` &innerClass=`list-unstyled`]]
+                </div>
+            </div>
+        </div>
+        <!-- /CONTENT -->
+        
+        <!-- FOOTER -->
+        [[$footer]]
+        <!-- /FOOTER -->
+
+        [[$footerJs]]
+    </body>
+</html>

@@ -1,0 +1,2 @@
+[[+pagetitle]] [[+longtitle]]<br>
+[[+content]]

@@ -1,6 +1,10 @@
 **/tmp
 **/node_modules
 **/fancyBox
-**/fancybox
+**/*fancybox*
+/js/datepicker*
+/js/bootstrap*
+/js/holder*
+/js/owl*
 /src/bootstrap
 /css

@@ -17,8 +17,10 @@
         <strong>Cайт:</strong>
         <a href="[[~[[+id]]]]" itemprop="Site">перейти</a>
     </p>
-    <p>
-        <strong>Положение:</strong>
-        <a href="[[+tv.document]]" itemprop="DivisionClause_DocLink">скачать</a>
-    </p>
+    [[getField? &id=`[[+id]]` &field=`document` &tpl=`@INLINE 
+        <p>
+            <strong>Положение:</strong>
+            <a href="[[+gf.output]]" itemprop="DivisionClause_DocLink">скачать</a>
+        </p>
+    `]]
 </li>

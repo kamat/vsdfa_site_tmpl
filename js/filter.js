@@ -1,4 +1,16 @@
 $(document).ready(function(){
+    $('.calendar').datepicker({
+        prevText: '<i class="glyphicon glyphicon-menu-left"></i>',
+        nextText: '<i class="glyphicon glyphicon-menu-right"></i>',
+        showOtherMonths: true,
+        dateFormat: 'yy-mm-dd',
+        onSelect: function(day) {
+            console.log("Filter by date: " + day);
+            applyFilter('date', day);
+            return false;
+        }
+    });
+
     $('[data-filter-by]').click(function(){
         if ($(this).data('filter-by') == 'archive') {
             var current = $(this).data('filter');
@@ -10,11 +22,13 @@ $(document).ready(function(){
         applyFilter(config.filterBy, config.filter);
         return false;
     });
+
     $('.more').click(function(){
         console.log('Load next page');
         loadPage();
         return false;
     });
+
     $('#reset-filters').click(function(){
         console.log('Reset filters');
 
@@ -30,6 +44,7 @@ $(document).ready(function(){
         loadPage();
         return false;
     });
+
     $('#reset-filters').hide();
 
     if (location.hash) {

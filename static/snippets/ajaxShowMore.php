@@ -29,6 +29,8 @@ switch ($type) {
             'where' => '{"template:=":6}',
             'tvFilters' => implode(',', $filterTV),
             'includeTVs' => true,
+            'sortbyTV' => 'eventDate',
+            'sortdirTV' => 'ASC',
             'tplWrapper' => '@INLINE <div class="page clearfix" data-page="'.$page.'" data-offset="'.$newOffset.'">[[+output]]</div>'
         );
         break;
@@ -56,6 +58,8 @@ switch ($type) {
             'where' => '{"template:=":7}',
             'tvFilters' => implode(',', $filterTV),
             'includeTVs' => true,
+            'sortbyTV' => 'startDate',
+            'sortdirTV' => 'ASC',
             'tplWrapper' => '@INLINE <div class="page clearfix" data-page="'.$page.'" data-offset="'.$newOffset.'">[[+output]]</div>'
         );
         break;

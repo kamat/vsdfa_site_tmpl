@@ -77,15 +77,23 @@ if (in_array($fld, $fields)) {
 }
 
 if ($class_key == 'modSymLink') {
+    $original = $modx->getObject('modResource', $content);
     if ($fld == 'symlink') {
-        $value = $content;
+        $value = 1;
+    } elseif ($fld == 'original') {
+        $value = $original->get('id');
     } else {
-        $original = $modx->getObject('modResource', $content);
         if (in_array($fld, $fields)) {
-            $value = empty($output) ? $original->get($fld) : $output;
+            $value = empty($value) ? $original->get($fld) : $value;
         } else {
-            $value = empty($output) ? $original->getTVValue($fld) : $output;
+            $value = empty($value) ? $original->getTVValue($fld) : $value;
         }
+    }
+} else {
+    if ($fld == 'symlink') {
+        $value = 0;
+    } elseif ($fld == 'original') {
+        $value = $document->get('id');
     }
 }
 

@@ -16,6 +16,12 @@
         <span itemprop="AddressStr">[[+gf.output]]</span>
     </p>
 `]]
+[[getField? &id=`[[+id]]` &field=`phone` &tpl=`@INLINE 
+    <p>
+        <strong>Телефон:</strong>
+        <span itemprop="Telephone">[[+gf.output]]</span>
+    </p>
+`]]
 [[getField? &id=`[[+id]]` &field=`email` &tpl=`@INLINE 
     <p>
         <strong>E-mail:</strong>

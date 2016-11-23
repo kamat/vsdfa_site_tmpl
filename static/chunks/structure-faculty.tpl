@@ -34,6 +34,7 @@
         &sortby=`menuindex`
         &sortdir=`ASC`
         &depth=`1`
+        &limit=`0`
         &toPlaceholder=`chairs`
     ]]
 
@@ -56,6 +57,7 @@
         &sortby=`menuindex`
         &sortdir=`ASC`
         &depth=`1`
+        &limit=`0`
         &toPlaceholder=`departments`
     ]]
         

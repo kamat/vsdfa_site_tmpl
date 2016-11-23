@@ -1,6 +1,23 @@
 <div class="container-fluid nav-block front-page-row">
+    <!-- 
+        Передумай срочно и удали!
+        Зачем это нужно? Анонсы есть в меню и табах ниже. Зачем их ещё и сюда?
+    -->
+
+            <div class="row">
+                [[!getResources@fpRowED?
+                    &parents=`188`
+                    &tpl=`event-frame`
+                    &limit=`6`
+                    &tvFilters=`startDate>>[[!getDate:date=`%Y-%m-%d`]]`
+                    &sortbyTV=`startDate`
+                    &sortdirTV=`ASC`
+                ]]
+            </div>
+    <!-- Передумай срочно и удали! -->
+
       <!-- Nav tabs -->
-      <ul class="nav nav-pills" role="tablist">
+      <ul class="nav nav-vsdfa" role="tablist">
         <li role="presentation" class="active">
           <a href="#news" aria-controls="news" role="tab" data-toggle="tab">
             Новости
@@ -17,17 +34,17 @@
           </a>
         </li>
         <li role="presentation">
-          <a href="#smi" aria-controls="smi" role="tab" data-toggle="tab">
+          <a href="#photo" aria-controls="photo" role="tab" data-toggle="tab">
             Фото
           </a>
         </li>
         <li role="presentation">
-          <a href="#smi" aria-controls="smi" role="tab" data-toggle="tab">
+          <a href="#video" aria-controls="video" role="tab" data-toggle="tab">
             Видео
           </a>
         </li>
         <li role="presentation">
-          <a href="#smi" aria-controls="smi" role="tab" data-toggle="tab">
+          <a href="#publications" aria-controls="publications" role="tab" data-toggle="tab">
             Издания
           </a>
         </li>
@@ -56,9 +73,24 @@
                 ]]
             </div>
         </div>
-        <!-- Science tab -->
+        <!-- SMI tab -->
         <div role="tabpanel" class="tab-pane owl-margin" id="smi">
-          [[$frames-list]]
+            SMI
         </div>
-      </div>
+
+        <!-- PHOTO tab -->
+        <div role="tabpanel" class="tab-pane owl-margin" id="photo">
+            PHOTO
+        </div>
+
+        <!-- VIDEO tab -->
+        <div role="tabpanel" class="tab-pane owl-margin" id="video">
+            VIDEO
+        </div>
+
+        <!-- publications tab -->
+        <div role="tabpanel" class="tab-pane owl-margin" id="publications">
+            publications
+        </div>
+    </div>
 </div>

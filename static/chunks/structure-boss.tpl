@@ -19,6 +19,12 @@
                 <span itemprop="AddressStr">[[+gf.output]]</span>
             </p>
         `]]
+        [[getField? &id=`[[+id]]` &field=`phone` &tpl=`@INLINE 
+            <p>
+                <strong>Телефон:</strong>
+                <span itemprop="Telephone">[[+gf.output]]</span>
+            </p>
+        `]]
         [[getField? &id=`[[+id]]` &field=`email` &tpl=`@INLINE 
             <p>
                 <strong>E-mail:</strong>
@@ -45,6 +51,7 @@
         &sortby=`menuindex`
         &sortdir=`ASC`
         &depth=`1`
+        &limit=`0`
         &toPlaceholder=`departments`
     ]]
         

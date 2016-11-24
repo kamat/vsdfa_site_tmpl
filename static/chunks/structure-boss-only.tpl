@@ -1,6 +1,10 @@
 <div class="panel panel-info">
     <div class="panel-heading">
-        <h3 class="panel-title"><span itemprop="Name">[[+pagetitle]]</span></h3>
+        <h3 class="panel-title">
+            <strong>
+                <span itemprop="Name">[[+pagetitle]]</span>
+            </strong>
+        </h3>
     </div>
     <div class="panel-body">
         [[!getResources?
@@ -13,15 +17,15 @@
             &tvFilters=`sticky>>0`
             &limit=`1`
         ]]
-        <p>
+        <div>
             <strong>Cайт:</strong>
             <a href="[[~[[+id]]]]" itemprop="Site">перейти</a>
-        </p>
+        </div>
         [[getField? &id=`[[+id]]` &field=`document` &tpl=`@INLINE 
-            <p>
+            <div>
                 <strong>Положение:</strong>
                 <a href="[[+gf.output]]" itemprop="DivisionClause_DocLink">скачать</a>
-            </p>
+            </div>
         `]]
     </div>
 </div>

@@ -1,8 +1,9 @@
-<li class="list-group-item">
-    <p>
-        <strong>Подразделение:</strong>
+<li class="list-group-item level-1">
+    <h4 class="list-group-item-heading">
+        <!-- strong>Подразделение:</strong -->
         <span itemprop="Name">[[+pagetitle]]</span>
-    </p>
+    </h4>
+    <p class="list-group-item-text">
     [[!getResources?
         &where=`{"template:=":10}`
         &parents=`[[+id]]`
@@ -13,14 +14,15 @@
         &tvFilters=`sticky>>0`
         &limit=`1`
     ]]
-    <p>
+    <div>
         <strong>Cайт:</strong>
         <a href="[[~[[+id]]]]" itemprop="Site">перейти</a>
-    </p>
+    </div>
     [[getField? &id=`[[+id]]` &field=`document` &tpl=`@INLINE 
-        <p>
+        <div>
             <strong>Положение:</strong>
             <a href="[[+gf.output]]" itemprop="DivisionClause_DocLink">скачать</a>
-        </p>
+        </div>
     `]]
+    </p>
 </li>

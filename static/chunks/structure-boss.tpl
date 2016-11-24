@@ -1,45 +1,49 @@
 <div class="panel panel-info">
     <div class="panel-heading">
-        <h3 class="panel-title"><span itemprop="Name">[[+pagetitle]]</span></h3>
+        <h3 class="panel-title">
+            <strong>
+                <span itemprop="Name">[[+pagetitle]]</span>
+            </strong>
+        </h3>
     </div>
     <div class="panel-body">
-        <p>
+        <div>
             <strong>ФИО руководителя:</strong>
             <span itemprop="Fio">[[+longtitle]]</span>
-        </p>
+        </div>
         [[getField? &id=`[[+id]]` &field=`position` &tpl=`@INLINE 
-            <p>
+            <div>
                 <strong>Должность:</strong>
                 <span>[[+gf.output]]</span>
-            </p>
+            </div>
         `]]
         [[getField? &id=`[[+id]]` &field=`address` &tpl=`@INLINE 
-            <p>
+            <div>
                 <strong>Адрес:</strong>
                 <span itemprop="AddressStr">[[+gf.output]]</span>
-            </p>
+            </div>
         `]]
         [[getField? &id=`[[+id]]` &field=`phone` &tpl=`@INLINE 
-            <p>
+            <div>
                 <strong>Телефон:</strong>
                 <span itemprop="Telephone">[[+gf.output]]</span>
-            </p>
+            </div>
         `]]
         [[getField? &id=`[[+id]]` &field=`email` &tpl=`@INLINE 
-            <p>
+            <div>
                 <strong>E-mail:</strong>
                 <a href="mailto:[[+gf.output]]" itemprop="E-mail">[[+gf.output]]</a>
-            </p>
+            </div>
         `]]
-        <p>
+        <div>
             <strong>Cайт:</strong>
             <a href="[[~[[+id]]]]" itemprop="Site">перейти</a>
-        </p>
+        </div>
         [[getField? &id=`[[+id]]` &field=`document` &tpl=`@INLINE 
-            <p>
+            <div>
                 <strong>Положение:</strong>
                 <a href="[[+gf.output]]" itemprop="DivisionClause_DocLink">скачать</a>
-            </p>
+            </div>
         `]]
     </div>
     
@@ -58,7 +62,9 @@
     [[+departments:notempty=`
         <!-- Подразделения -->
         <div class="panel-heading">
-            <h3 class="panel-title">Состав подразделения:</h3>
+            <h3 class="panel-title">
+                <strong>Состав управления:</strong>
+            </h3>
         </div>
 
         <ul class="list-group">

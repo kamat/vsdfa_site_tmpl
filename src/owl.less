@@ -19,3 +19,54 @@
   margin-left: 41px;
   margin-right: 41px;
 }
+
+.breaking-news.owl-theme {
+    margin-bottom: 15px;
+    height: 400px;
+    .owl-wrapper-outer,
+    .owl-wrapper,
+    .owl-item,
+    .owl-item a{
+      height: 100%;
+    }
+    .owl-item a {
+      display: block;
+      background-color: transparent;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .owl-controls {
+      .owl-pagination {
+        position: absolute;
+        top: 5%;
+        right: 8%;
+        .owl-page {
+          > span {
+            background-color: @bordo-light;
+          }
+          &.active > span {
+            background-color: @bordo;
+          }
+        }
+      }
+      .owl-buttons {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        > div {
+          height: 400px;
+          width: 5%;
+          margin: 0;
+          padding: 0;
+          border: none;
+          background: rgba(0,0,0,0.2);
+          border-radius: 0;
+          top: 0;
+          .glyphicon {
+            top: 45%;
+          }
+        }
+      }
+    }
+}

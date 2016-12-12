@@ -24,24 +24,23 @@
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7">
                     <h2 class="pagetitle">[[*pagetitle]]</h2>
-                    [[getResources@EmployeesList?
-                        &parents=`[[getField? &id=`[[*id]]` &field=`original`]]`
-                        &limit=`1`
-                        &tpl=`employee_gr`
-                    ]]
-                    <div class="content">
-                        [[*content]]
-                    </div>
+                    <h4>
+                        <span class="label label-danger">
+                            [[*category:getCategory]]
+                        </span>
+                        <small>
+                            <i class="glyphicon glyphicon-time"></i>
+                            [[*eventDate]]
+                        </small>
+                    </h4>
+                    <div class="videoplayer">[[*videoplayer]]</div>
+                    <div class="content">[[*content]]</div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-5">
-                    [[!Wayfinder?
-                        &startId=`[[*parent]]`
-                        &level=`2`
-                        &where=`{"template:!=": 19}`
-                        &outerClass=`nav nav-vsdfa nav-stacked`
-                        &innerClass=`nav`
-                        &parentClass=`parent`
-                    ]]
+                    <h3>Категории</h3>
+                    <ul class="nav">
+                        [[!getCategories? &url=`[[~[[*parent]]]]`]]
+                    </ul>
                 </div>
             </div>
         </div>

@@ -7,25 +7,25 @@
         <div class="col-lg-5 col-md-6 col-sm-6">
             <h3>Наши программы</h3>
             <div class="frame faculty">
-                <a href="#">
+                <a href="[[~50]]#[[getField? &id=`385` &field=`alias`]]">
                     <i class="icon small icon-book1"></i>
                     <h4 class=title>Среднее профессиональное образование</h4>
                 </a>
             </div>
             <div class="frame faculty">
-                <a href="#">
+                <a href="[[~50]]#[[getField? &id=`382` &field=`alias`]]">
                     <i class="icon small icon-book2"></i>
                     <h4 class=title>Бакалавриат / Специалитет</h4>
                 </a>
             </div>
             <div class="frame faculty">
-                <a href="#">
+                <a href="[[~50]]#[[getField? &id=`383` &field=`alias`]]">
                     <i class="icon small icon-book3"></i>
                     <h4 class=title>Магистратура</h4>
                 </a>
             </div>
             <div class="frame faculty">
-                <a href="#">
+                <a href="[[~50]]#[[getField? &id=`384` &field=`alias`]]">
                     <i class="icon small icon-book4"></i>
                     <h4 class=title>Аспирантура</h4>
                 </a>

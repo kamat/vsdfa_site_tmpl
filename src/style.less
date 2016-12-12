@@ -2,6 +2,7 @@
 //@import "bootstrap/less/variables.less";
 //@import "bootstrap/less/bootstrap.less";
 @import "bootstrap.less";
+@import "font-awesome-4.7.0/less/font-awesome.less";
 @import "icons.less";
 @import "navbar.less";
 @import "nav.less";
@@ -9,12 +10,35 @@
 @import "frames.less";
 @import "person.less";
 @import "calendar.less";
+@import "photogallery.less";
+@import "button.less";
+
+h4 .label {
+  margin: 0 5px;
+}
+
+.event-panel .intro {
+  margin: 5px 0;
+}
+
+.top-menu,
+.main-menu,
+body > .main {
+  padding-left:  @page-padding;
+  padding-right: @page-padding;
+}
+
+.top-menu, .main-menu {
+  .navbar-collapse {
+      padding-left: 0;
+  }
+}
 
 .footer {
   background:    @bordo;
   padding-top:   15px;
-  padding-left:  40px;
-  padding-right: 40px;
+  padding-left:  @page-padding;
+  padding-right: @page-padding;
   margin-top:    20px;
   address {
     color: #fff;
@@ -47,8 +71,14 @@
   .row {
     background: @bordo;
   }
+  .first {
+      padding-left:  @page-padding;
+  }
+  .last {
+      padding-right:  @page-padding;
+  }
   .logo {
-    text-align: right;
+    text-align: left;
     //width: 180px;
     a {
       margin-top: 5px;
@@ -63,14 +93,11 @@
     }
   }
   .name {
-    @media (max-width: 1075px) {
-      display: none;
-    }
     a {
       margin-top: 20px;
       display: inline-block;
       height: 85px;
-      width: 390px;
+      width: 315px;
       background: url("../img/main-spr.png") no-repeat scroll -180px -20px transparent;
       &:hover, &:focus {
         opacity: .75;
@@ -80,33 +107,26 @@
   }
   .menu {
     margin-top: 20px;
+    .item.open .dropdown-menu {
+      top: inherit;
+    }
   }
 }
 
 .front-page-row {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: @page-padding;
+  padding-right: @page-padding;
   &:nth-child(odd) {
     background-color: transparent;
   }
   &:nth-child(even) {
-    background-color: @my-gray-lighter;
+    background-color: lighten(@my-gray-lighter, 5%);
   }
   h1, h2,h3,h4,h5,h6 {
     color: @bordo;
     &:hover, &:focus {
       color: @bordo-light;
     }
-  }
-}
-
-.btn-menu {
-  font-size: 18px;
-  color: #fff;
-  &:hover, &focus {
-    color: #fff;
-    opacity: .75;
-    filter: alpha(opacity=75);
   }
 }
 
@@ -187,4 +207,23 @@
 
 .list-group-item.level-1 {
     padding-left: 30px;
+}
+
+.showcase {
+    &:extend(.text-center);
+    transition: all .2s ease-in-out;
+    .title {
+        height: 70px;
+        margin: 10px 0;
+        font-size: 16px;
+        display: block;
+    }
+    img {
+        &:extend(.img-circle);
+        &:extend(.img-thumbnail);
+        &:active,
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }

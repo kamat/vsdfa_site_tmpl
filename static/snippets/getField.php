@@ -81,7 +81,7 @@ if ($class_key == 'modSymLink') {
     if ($fld == 'symlink') {
         $value = 1;
     } elseif ($fld == 'original') {
-        $value = $original->get('id');
+        $value = $content;
     } else {
         if (in_array($fld, $fields)) {
             $value = empty($value) ? $original->get($fld) : $value;
@@ -93,7 +93,7 @@ if ($class_key == 'modSymLink') {
     if ($fld == 'symlink') {
         $value = 0;
     } elseif ($fld == 'original') {
-        $value = $document->get('id');
+        $value = $placeholders['gf']['doc'];
     }
 }
 

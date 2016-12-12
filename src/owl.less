@@ -1,23 +1,40 @@
 .owl-theme .owl-controls .owl-buttons {
-  .owl-prev, .owl-next {
     position: absolute;
-    top: 40%;
-  }
+    top: 45%;
+    width: 100%;
 
-  .owl-prev {
-    left: 0;
-    margin-left: -40px;
-  }
+    div {
+        position: absolute;
+        width: 3em;
+	height: 3em;
+        padding: 0;
+        border: none;
+        background: rgba(0,0,0,0.2);
+        border-radius: 100%;
+        top: 0;
+    }
 
-  .owl-next {
-    right: 0;
-    margin-right: -40px;
-  }
+    .owl-prev, .owl-next {
+        .glyphicon {
+	    font-size: 3em;
+	}
+    }
+
+    .owl-prev {
+        left: 0;
+        margin-left: (0 - @page-padding);
+    }
+
+    .owl-next {
+        right: 0;
+        margin-right: (0 - @page-padding);
+    }
 }
 
-.owl-margin {
-  margin-left: 41px;
-  margin-right: 41px;
+.banners.owl-theme {
+    .owl-controls .owl-buttons {
+        top: 20%;
+    }
 }
 
 .breaking-news.owl-theme {

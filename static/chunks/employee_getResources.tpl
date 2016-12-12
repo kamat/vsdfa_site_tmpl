@@ -84,11 +84,15 @@
                 </div>
             </div>
         </div>
-        [[+tv.sticky:is=`1`:then=`
-            [[getResources@SubordinatesList?
-                &tplWrapper=`subordinates_gr`
-                &parents=`[[+parent]]`
-            ]]
-        `]]
+        [[If?
+            &subject=`[[getField? &id=`[[+id]]` &field=`sticky`]]`
+            &operator=`EQ`
+            &operand=`1`
+            &then=`
+                [[getResources@SubordinatesList?
+                    &tplWrapper=`subordinates_gr`
+                    &parents=`[[getField? &id=`[[+id]]` &field=`parent`]]`
+                ]]
+            `]]
     </div>
 </div>

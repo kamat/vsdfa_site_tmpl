@@ -20,6 +20,6 @@
                 <strong>Конец:</strong> [[+tv.endDate:strtotime:date=`%d %B %Y %T`:replace=` 00:00:00==`]]
             </div>
         </div>
-        <div class="">[[+introtext]]</div>
+        <div class="intro">[[+introtext]]</div>
     </div>
 </div>

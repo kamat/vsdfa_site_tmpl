@@ -1,4 +1,10 @@
 <nav class="navbar navbar-vsdfa top-menu">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-top-menu" aria-expanded="false">
+            <small>СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</small>
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+    </div>
     <div class="collapse navbar-collapse" id="nav-top-menu">
         <ul class="nav navbar-nav navbar-left">
             [[Wayfinder@MainMenu? &startId=`16` ]]

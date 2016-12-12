@@ -2,6 +2,8 @@
 **/node_modules
 **/fancyBox
 **/*fancybox*
+**/*fontawesome*
+**/*font-awesome*
 /js/datepicker*
 /js/bootstrap*
 /js/holder*

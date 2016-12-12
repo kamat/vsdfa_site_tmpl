@@ -24,24 +24,15 @@
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7">
                     <h2 class="pagetitle">[[*pagetitle]]</h2>
-                    [[getResources@EmployeesList?
-                        &parents=`[[getField? &id=`[[*id]]` &field=`original`]]`
-                        &limit=`1`
-                        &tpl=`employee_gr`
-                    ]]
-                    <div class="content">
-                        [[*content]]
-                    </div>
+                    <p class="image">
+                        <a href="[[*image]]" class="fancybox">
+                            <img src="[[pthumb? &input=`[[*image]]` &options=`w=800&h=600&far=c`]]" class="img-thumbnail">
+                        </a>
+                    </p>
+                    <div class="content">[[*content]]</div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-5">
-                    [[!Wayfinder?
-                        &startId=`[[*parent]]`
-                        &level=`2`
-                        &where=`{"template:!=": 19}`
-                        &outerClass=`nav nav-vsdfa nav-stacked`
-                        &innerClass=`nav`
-                        &parentClass=`parent`
-                    ]]
+                    [[$submenu]]
                 </div>
             </div>
         </div>

@@ -30,7 +30,7 @@ switch ($type) {
             'tvFilters' => implode(',', $filterTV),
             'includeTVs' => true,
             'sortbyTV' => 'eventDate',
-            'sortdirTV' => 'ASC',
+            'sortdirTV' => 'DESC',
             'tplWrapper' => '@INLINE <div class="page clearfix" data-page="'.$page.'" data-offset="'.$newOffset.'">[[+output]]</div>'
         );
         break;
@@ -60,6 +60,44 @@ switch ($type) {
             'includeTVs' => true,
             'sortbyTV' => 'startDate',
             'sortdirTV' => 'ASC',
+            'tplWrapper' => '@INLINE <div class="page clearfix" data-page="'.$page.'" data-offset="'.$newOffset.'">[[+output]]</div>'
+        );
+        break;
+    case 'press':
+        if ($date) {
+            $nextDay = new DateTime($date);
+            $nextDay->modify("+1 day");
+            $filterTV[] = "eventDate>=$date,eventDate<=".$nextDay->format("Y-m-d");
+        }
+        $config = array(
+            'tpl' => 'tagged-frame',
+            'limit' => $limit,
+            'offset' => $offset,
+            'parents' => '217',
+            'where' => '{"template:=":6}',
+            'tvFilters' => implode(',', $filterTV),
+            'includeTVs' => true,
+            'sortbyTV' => 'eventDate',
+            'sortdirTV' => 'DESC',
+            'tplWrapper' => '@INLINE <div class="page clearfix" data-page="'.$page.'" data-offset="'.$newOffset.'">[[+output]]</div>'
+        );
+        break;
+    case 'video':
+        if ($date) {
+            $nextDay = new DateTime($date);
+            $nextDay->modify("+1 day");
+            $filterTV[] = "eventDate>=$date,eventDate<=".$nextDay->format("Y-m-d");
+        }
+        $config = array(
+            'tpl' => 'tagged-frame',
+            'limit' => $limit,
+            'offset' => $offset,
+            'parents' => '220',
+            'where' => '{"template:=":25}',
+            'tvFilters' => implode(',', $filterTV),
+            'includeTVs' => true,
+            'sortbyTV' => 'eventDate',
+            'sortdirTV' => 'DESC',
             'tplWrapper' => '@INLINE <div class="page clearfix" data-page="'.$page.'" data-offset="'.$newOffset.'">[[+output]]</div>'
         );
         break;

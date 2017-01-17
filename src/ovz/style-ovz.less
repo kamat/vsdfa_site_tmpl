@@ -1,0 +1,78 @@
+
+.front-page-row {
+  padding-left: @page-padding;
+  padding-right: @page-padding;
+  &:nth-child(odd) {
+    background-color: transparent;
+  }
+  &:nth-child(even) {
+    background-color: transparent;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    &, &:hover, &:focus {
+      color: @fg;
+      background-color: @bg;
+    }
+  }
+}
+
+// Links and buttons
+a,
+.btn-menu,
+.open .dropdown-menu > li > a,
+.frame a,
+.frame .image .tag,
+.navbar-vsdfa .navbar-text,
+.navbar-vsdfa .navbar-nav > li > a,
+.navbar-vsdfa .navbar-nav > .open > a,
+.navbar-vsdfa .navbar-nav > .open .dropdown-menu > li > a,
+.nav-vsdfa > li > a,
+.nav-vsdfa > li.active > a,
+.nav-vsdfa.nav-stacked > li > a,
+.nav-vsdfa.nav-stacked > li.active > a,
+.nav-vsdfa.nav-stacked .nav > li > a,
+.footer .menu > li > a,
+.footer address a {
+  &, &:hover, &:focus {
+    color: @fg;
+    background-color: @bg;
+  }
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+
+.breadcrumb,
+.pagetitle,
+.dropdown-menu,
+.person-card .person-contacts abbr,
+.footer,
+.footer address,
+.frame a:hover .title,
+.frame a:focus .title {
+    color: @fg;
+    background-color: @bg;
+}
+
+// Borders
+.footer .menu > li.first > a,
+.nav-vsdfa > li.active > a {
+  border-color: @fg;
+}
+
+.footer {
+  border-top: 2px solid @fg;
+}
+
+.main-menu {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid @fg;
+}
+
+// LOGO
+.header .logo a,
+.header .name a {
+  background-image: @logo-img;
+}

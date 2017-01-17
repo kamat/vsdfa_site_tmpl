@@ -17,7 +17,7 @@
     <link href="assets/templates/kama/css/jquery.fancybox.css" rel="stylesheet">
 
     <!-- Kama + Bootstrap -->
-    <link href="assets/templates/kama/css/style.css" rel="stylesheet">
+    <link href="assets/templates/kama/css/[[!mainStyleFile]]" rel="stylesheet">
     <!-- MAIN STYLE -- [[!mainStyleFile]] -->
     
     <!-- Let it snow! -->

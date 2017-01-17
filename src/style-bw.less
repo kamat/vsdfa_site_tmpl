@@ -1,5 +1,6 @@
+// Black and white theme
 @import "ovz/bw-variables.less";
-@import "ovz/bw-variables_bootstrap.less";
+@import "variables_bootstrap.less";
 
 @import "bootstrap.less";
 @import "font-awesome-4.7.0/less/font-awesome.less";
@@ -15,19 +16,4 @@
 
 @import "unsorted.less";
 
-.front-page-row {
-  padding-left: @page-padding;
-  padding-right: @page-padding;
-  &:nth-child(odd) {
-    background-color: transparent;
-  }
-  &:nth-child(even) {
-    background-color: transparent;
-  }
-  h1, h2,h3,h4,h5,h6 {
-    color: @bordo;
-    &:hover, &:focus {
-      color: @bordo-light;
-    }
-  }
-}
+@import "ovz/style-ovz.less";

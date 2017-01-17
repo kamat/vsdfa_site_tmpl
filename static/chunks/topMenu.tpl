@@ -10,7 +10,8 @@
             [[Wayfinder@MainMenu? &startId=`16` ]]
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" title="Версия для слабовидящих"><i class="glyphicon glyphicon-eye-open"></i></a></li>
+            <li itemprop="Copy" class="ovz-mode-contrast"><a href="#" title="Версия для слабовидящих"><i class="glyphicon glyphicon-eye-open"></i></a></li>
+            <!-- li itemprop="Copy" class="ovz-mode-normal hide"><a href="#" title="Нормальная версия"><i class="glyphicon glyphicon-eye-open"></i></a></li -->
             <li><p class="navbar-text">12+</p></li>
             <li role="presentation" class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -26,8 +27,9 @@
                     </li>
                 </ul>
             </li>
+            <!-- Пока перевода нет . . .
             <li><a href="#">Ru</a></li>
-            <li><a href="#">En</a></li>
+            <li><a href="#">En</a></li> -->
         </ul>
     </div>
 </nav>

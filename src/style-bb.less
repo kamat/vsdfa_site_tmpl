@@ -1,0 +1,33 @@
+@import "ovz/bb-variables.less";
+@import "ovz/bb-variables_bootstrap.less";
+
+@import "bootstrap.less";
+@import "font-awesome-4.7.0/less/font-awesome.less";
+@import "icons.less";
+@import "navbar.less";
+@import "nav.less";
+@import "owl.less";
+@import "frames.less";
+@import "person.less";
+@import "calendar.less";
+@import "photogallery.less";
+@import "button.less";
+
+@import "unsorted.less";
+
+.front-page-row {
+  padding-left: @page-padding;
+  padding-right: @page-padding;
+  &:nth-child(odd) {
+    background-color: transparent;
+  }
+  &:nth-child(even) {
+    background-color: transparent;
+  }
+  h1, h2,h3,h4,h5,h6 {
+    color: @bordo;
+    &:hover, &:focus {
+      color: @bordo-light;
+    }
+  }
+}

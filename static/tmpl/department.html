@@ -23,9 +23,9 @@
             <!-- /BREADCRUMBS -->
             <div class="row">
                 <div class="col-lg-9 col-md-8 col-sm-7">
-                    <h2 class="pagetitle">[[*pagetitle]]</h2>
-                    [[getResources@EmployeesList?
-                        &parents=`[[getField? &id=`[[*id]]` &field=`original`]]`
+                    <h3 class="pagetitle">[[*pagetitle]]</h3>
+                    [[!getResources@EmployeesList?
+                        &parents=`[[!getField? &id=`[[*id]]` &field=`original`]]`
                         &limit=`1`
                         &tpl=`employee_gr`
                     ]]
@@ -34,13 +34,28 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-5">
-                    [[!Wayfinder?
-                        &startId=`[[*parent]]`
-                        &level=`2`
-                        &where=`{"template:!=": 19}`
-                        &outerClass=`nav nav-vsdfa nav-stacked`
-                        &innerClass=`nav`
-                        &parentClass=`parent`
+                    [[!If?
+                        &subject=`[[*parent]]`
+                        &operator=`EQ`
+                        &operand=`0`
+                        &then=`<!-- self-childs -->
+                            [[!Wayfinder?
+                                &startId=`[[*id]]`
+                                &level=`2`
+                                &where=`{"template:!=": 19}`
+                                &outerClass=`nav nav-vsdfa nav-stacked`
+                                &innerClass=`nav`
+                                &parentClass=`parent`
+                            ]]`
+                        &else=`<!-- level-up -->
+                            [[!Wayfinder?
+                                &startId=`[[*parent]]`
+                                &level=`2`
+                                &where=`{"template:!=": 19}`
+                                &outerClass=`nav nav-vsdfa nav-stacked`
+                                &innerClass=`nav`
+                                &parentClass=`parent`
+                            ]]`
                     ]]
                 </div>
             </div>

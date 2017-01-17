@@ -5,7 +5,8 @@
         <div class="col-sm-6 col-xs-12">
             <address>
                 <strong>ФГБОУ ВО Вологодская ГМХА</strong><br>
-                160555, Вологда-Молочное, ул. Шмидта, д.2<br>
+                <abbr title="Адрес"><i class="glyphicon glyphicon-home"></i></abbr>
+                160555, г. Вологда, с. Молочное, ул. Шмидта, д.2<br>
                 <abbr title="Телефон"><i class="glyphicon glyphicon-earphone"></i></abbr>
                 +7 (8172) 52-57-30<br>
                 <abbr title="E-mail"><i class="glyphicon glyphicon-envelope"></i></abbr>
@@ -15,22 +16,25 @@
             </address>
         </div>
         <div class="col-xs-6">
-            <div class="text-right social">
-                <a href="http://vk.com/vgmha" class="btn btn-info">
+            <p class="text-right social">
+                <a href="http://vk.com/vgmha" class="btn btn-info" target="_blank">
                     <i class="fa fa-vk" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.facebook.com/vgmha/" class="btn btn-primary">
+                <a href="https://www.facebook.com/vgmha/" class="btn btn-primary" target="_blank">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
-                <a href="http://www.youtube.com/user/molochnoeTV" class="btn btn-danger">
+                <a href="http://www.youtube.com/user/molochnoeTV" class="btn btn-danger" target="_blank">
                     <i class="fa fa-youtube" aria-hidden="true"></i>
                 </a>
-            </div>
+            </p>
+            <p class="text-right ya">
+                [[$yandex]]
+            </p>
         </div>
     </div>
 
     <!-- Footer copyrights -->
-    <div>
-        Copyright by Kama(c)
-    </div>
+    <!-- 
+        Made by Kama
+    -->
 </div>

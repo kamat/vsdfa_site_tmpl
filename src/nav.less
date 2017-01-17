@@ -48,18 +48,30 @@
 	}
 	.parent {
 	    .nav {
-		display: none;
+		    display: none;
+		    .sitemap & {
+		        display: block;
+		        background-color: transparent;
+		        padding-left: 10px;
+		        > li > a {
+		            background-color: transparent;
+		            &:focus, &:hover {
+		                background-color: @my-gray-lighter;
+		                color: @link-color;
+		            }
+		        }
+		    }
 	    }
 	    &.active .nav {
-		display: block;
-		border-left: 3px solid @bordo;
-		//padding-left: 10px;
+		    display: block;
+		    border-left: 3px solid @bordo;
+		    //padding-left: 10px;
 	    }
 	}
 	.active > a {
 	    &, &:focus, &:hover {
-		background-color: @bordo;
-		color: #fff;
+		    background-color: @bordo;
+		    color: #fff;
 	    }
 	}
 	.nav {

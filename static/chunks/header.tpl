@@ -1,4 +1,4 @@
-<div class="container-fluid header">
+<div class="container-fluid header"><div class="snow-container" style="height: 190px;"><div id="snow"></div></div>
     <div class="row">
         <div class="col-lg-7 col-md-7 col-sm-3 first hidden-xs">
             <div class="logo pull-left">
@@ -14,32 +14,14 @@
                     <i class="glyphicon glyphicon-user"></i>
                     Абитуриенту
                 </button>
-                <ul class="dropdown-menu">
-                    [[getResources?
-                        &parents=`238`
-                        &sortby=`menuindex`
-                        &sortdir=`ASC`
-                        &depth=`0`
-                        &limit=`0`
-                        &tpl=`@INLINE <li><a href="[[~[[+id]]]]">[[+pagetitle]]</a></li>`
-                    ]]
-                </ul>
+                [[Wayfinder? &startId=`238` &level=`1` &outerClass=`dropdown-menu` &firstClass=``]]
             </div>
             <div class="item">
                 <button href="[[~67]]" class="btn btn-block btn-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="glyphicon glyphicon-education"></i>
                     Студенту
                 </button>
-                <ul class="dropdown-menu">
-                    [[getResources?
-                        &parents=`67`
-                        &sortby=`menuindex`
-                        &sortdir=`ASC`
-                        &depth=`0`
-                        &limit=`0`
-                        &tpl=`@INLINE <li><a href="[[~[[+id]]]]">[[+pagetitle]]</a></li>`
-                    ]]
-                </ul>
+                [[Wayfinder? &startId=`67` &level=`1` &outerClass=`dropdown-menu` &firstClass=``]]
             </div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 menu last">
@@ -48,32 +30,14 @@
                     <i class="glyphicon glyphicon-bell"></i>
                     Выпускнику
                 </button>
-                <ul class="dropdown-menu">
-                    [[getResources?
-                        &parents=`433`
-                        &sortby=`menuindex`
-                        &sortdir=`ASC`
-                        &depth=`0`
-                        &limit=`0`
-                        &tpl=`@INLINE <li><a href="[[~[[+id]]]]">[[+pagetitle]]</a></li>`
-                    ]]
-                </ul>
+                [[Wayfinder? &startId=`433` &level=`1` &outerClass=`dropdown-menu` &firstClass=``]]
             </div>
             <div class="item">
                 <button href="[[~435]]" class="btn btn-block btn-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="glyphicon glyphicon-briefcase"></i>
                     Сотруднику
                 </button>
-                <ul class="dropdown-menu">
-                    [[getResources?
-                        &parents=`435`
-                        &sortby=`menuindex`
-                        &sortdir=`ASC`
-                        &depth=`0`
-                        &limit=`0`
-                        &tpl=`@INLINE <li><a href="[[~[[+id]]]]">[[+pagetitle]]</a></li>`
-                    ]]
-                </ul>
+                [[Wayfinder? &startId=`435` &level=`1` &outerClass=`dropdown-menu` &firstClass=``]]
             </div>
         </div>
     </div>

@@ -16,11 +16,11 @@
             Пресса о нас
           </a>
         </li>
-        <li role="presentation">
+        <!-- li role="presentation">
           <a href="#photo" aria-controls="photo" role="tab" data-toggle="tab">
             Фото
           </a>
-        </li>
+        </li -->
         <li role="presentation">
           <a href="#video" aria-controls="video" role="tab" data-toggle="tab">
             Видео
@@ -107,12 +107,7 @@
             <div class="row">
                 [[!getResources?
                     &parents=`221`
-                    &tpl=`@INLINE 
-                        <p class="col-sm-6 col-xs-12">
-                            <a href="[[~[[+id]]]]" class="btn btn-default btn-lg btn-block">
-                                [[+pagetitle]]
-                            </a>
-                        </p>`
+                    &tpl=`pub-frame`
                     &depth=`1`
                     &limit=`0`
                 ]]

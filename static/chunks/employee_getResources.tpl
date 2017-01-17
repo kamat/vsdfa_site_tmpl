@@ -89,7 +89,7 @@
             &operator=`EQ`
             &operand=`1`
             &then=`
-                [[getResources@SubordinatesList?
+                [[!getResources@SubordinatesList?
                     &tplWrapper=`subordinates_gr`
                     &parents=`[[getField? &id=`[[+id]]` &field=`parent`]]`
                 ]]

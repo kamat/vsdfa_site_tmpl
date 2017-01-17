@@ -6,7 +6,7 @@
     <p class="list-group-item-text">
     [[!getResources?
         &where=`{"template:=":10}`
-        &parents=`[[+id]]`
+        &parents=`[[getField? &id=`[[+id]]` &field=`original`]]`
         &tpl=`structure-employee-boss`
         &includeTVs=`1`
         &sortby=`menuindex`
@@ -21,7 +21,7 @@
     [[getField? &id=`[[+id]]` &field=`document` &tpl=`@INLINE 
         <div>
             <strong>Положение:</strong>
-            <a href="[[+gf.output]]" itemprop="DivisionClause_DocLink">скачать</a>
+            <a href="[[+gf.output]]" itemprop="DivisionClause_DocLink" target="_blank">скачать</a>
         </div>
     `]]
     </p>

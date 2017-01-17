@@ -1,6 +1,6 @@
 .owl-theme .owl-controls .owl-buttons {
     position: absolute;
-    top: 45%;
+    top: 30%;
     width: 100%;
 
     div {
@@ -37,9 +37,36 @@
     }
 }
 
+.breaking-news-height(@width, @height) {
+    @media (min-width: @width) {
+        .breaking-news.owl-theme,
+        .breaking-news.owl-theme .owl-controls .owl-buttons > div { height: @height; }
+    }
+}
+
+@media (max-width: 600px) {
+    .breaking-news.owl-theme,
+    .breaking-news.owl-theme .owl-controls .owl-buttons > div {
+        height: 200px;
+    }
+}
+
+.breaking-news-height(340px, 110px);
+.breaking-news-height(380px, 120px);
+.breaking-news-height(400px, 130px);
+.breaking-news-height(480px, 150px);
+.breaking-news-height(540px, 180px);
+.breaking-news-height(600px, 200px);
+.breaking-news-height(700px, 240px);
+.breaking-news-height(800px, 270px);
+.breaking-news-height(900px, 290px);
+.breaking-news-height(1000px, 330px);
+.breaking-news-height(1100px, 350px);
+.breaking-news-height(1200px, 370px);
+.breaking-news-height(1300px, 400px);
+
 .breaking-news.owl-theme {
     margin-bottom: 15px;
-    height: 400px;
     .owl-wrapper-outer,
     .owl-wrapper,
     .owl-item,
@@ -72,7 +99,6 @@
         top: 0;
         width: 100%;
         > div {
-          height: 400px;
           width: 5%;
           margin: 0;
           padding: 0;

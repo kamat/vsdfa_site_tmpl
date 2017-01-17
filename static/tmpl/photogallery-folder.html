@@ -22,29 +22,43 @@
             [[$breadcrumbs]]
             <!-- /BREADCRUMBS -->
 
-            <h2 class="pagetitle">[[*pagetitle]]</h2>
-            <div class="content">[[*content]]</div>
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-7">
+                    <h3 class="pagetitle">[[*pagetitle]]</h3>
+                    <div class="content">[[*content]]</div>
             
-            [[getResources?
-                &parents=`[[*id]]`
-                &limit=`0`
-                &depth=`1`
-                &tpl=`folder-item`
-                &tplWrapper=`@INLINE <div class="folders clearfix">[[+output]]</div>`
-                &where=`{"template:=":23}`
-                &includeTVs=`1`
-            ]]
+                    [[getResources?
+                        &parents=`[[*id]]`
+                        &limit=`0`
+                        &depth=`0`
+                        &tpl=`folder-item`
+                        &tplWrapper=`@INLINE <div class="folders clearfix">[[+output]]</div>`
+                        &where=`{"template:=":23}`
+                        &includeTVs=`1`
+                    ]]
             
-            [[getResources?
-                &parents=`[[*id]]`
-                &limit=`0`
-                &depth=`0`
-                &tpl=`image-item`
-                &tplWrapper=`@INLINE <div class="images clearfix">[[+output]]</div>`
-                &where=`{"template:=":24}`
-                &includeTVs=`1`
-            ]]
-            
+                    [[getResources?
+                        &parents=`[[*id]]`
+                        &limit=`0`
+                        &depth=`0`
+                        &tpl=`image-item`
+                        &tplWrapper=`@INLINE <div class="images clearfix">[[+output]]</div>`
+                        &where=`{"template:=":24}`
+                        &includeTVs=`1`
+                    ]]
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-5">
+                    <h3 class="pagetitle">Рубрики</h3>
+                    [[Wayfinder?
+                        &startId=`218`
+                        &level=`1`
+                        &where=`{"template:=":26}`
+                        &outerClass=`nav nav-vsdfa nav-stacked`
+                        &innerClass=``
+                        &parentClass=``
+                    ]]
+                </div>
+            </div>
         </div>
         <!-- /CONTENT -->
         

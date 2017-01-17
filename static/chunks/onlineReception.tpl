@@ -2,23 +2,25 @@
     &hooks=`recaptchav2,email,FormItSaveForm`
     &recaptchaTheme=`dark`
     &recaptchaJs=`{size: "compact"}`
-    &emailTo=`dirportal@molochnoe.ru`
-    &emailSubject=`Отправка формы onlineReception`
+    &emailTo=`vgmha@list.ru`
+    &emailSubject=`Отправка формы "online приёмная ректора"`
     &emailTpl=`emailOR`
     &emailHtml=`0`
     &successMessage=`
         <div class="alert alert-success alert-block">
             <p>
-                Благодарим Вас за то, что воспользовались сервисом “on-line приемная ректора»,
+                Благодарим Вас за то, что воспользовались сервисом "on-line приемная ректора",
                 в самое ближайшее время Ваш запрос будет рассмотрен.
                 Ответ будет направлен в письменном виде на указанный e-mail адрес
                 или с Вами свяжутся по указанному в запросе телефону.
             </p>
             <h3 class="text-center">Удачного дня!</h3>
         </div>`
+    &validate=`firstname:required,email:required,whois:required,message:required:minLength=^6^`
 ]]
 
 [[!+fi.successMessage]]
+[[!+fi.validation_error_message]]
 
 <form method="post" action="[[~[[*id]]]]" class="form-horizontal" id="onlineReception">
     <div class="form-group [[!+fi.error.firstname:notempty=`has-error`]]">

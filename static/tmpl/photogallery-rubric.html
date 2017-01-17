@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        [[$htmlHead]]
+    </head>
+    <body>
+        <!-- TOP MENU -->
+        [[$top-menu]]
+        <!-- TOP MENU -->
+
+        <!-- HEADER -->
+        [[$header]]
+        <!-- /HEADER -->
+
+        <!-- MAIN MENU (dropdown) -->
+        [[$main-menu]]
+        <!-- /MAIN MENU -->
+
+        <!-- CONTENT -->
+        <div class="container-fluid main">
+            <!-- BREADCRUMBS -->
+            [[$breadcrumbs]]
+            <!-- /BREADCRUMBS -->
+
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-7">
+                    <h3 class="pagetitle">[[*pagetitle]]</h3>
+                    <div class="content">[[*content]]</div>
+            
+                    [[getResources?
+                        &parents=`[[*id]]`
+                        &limit=`0`
+                        &depth=`0`
+                        &tpl=`folder-item`
+                        &tplWrapper=`@INLINE <div class="folders clearfix">[[+output]]</div>`
+                        &where=`{"template:=":23}`
+                        &includeTVs=`1`
+                    ]]
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-5">
+                    <h3 class="pagetitle">Рубрики</h3>
+                    [[Wayfinder?
+                        &startId=`218`
+                        &level=`1`
+                        &where=`{"template:=":26}`
+                        &outerClass=`nav nav-vsdfa nav-stacked`
+                        &innerClass=``
+                        &parentClass=``
+                    ]]
+                </div>
+            </div>
+        </div>
+        <!-- /CONTENT -->
+        
+        <!-- FOOTER -->
+        [[$footer]]
+        <!-- /FOOTER -->
+
+        [[$footerJs]]
+    </body>
+</html>

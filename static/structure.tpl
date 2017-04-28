@@ -1,13 +1,14 @@
 [[!getResources?
     &where=`{"template:=":14}`
-    &parents=`[[*id]]`
-    &tpl=`structure-boss-only`
+    &parents=`1606`
+    &tpl=`structure-employee`
+    &tplWrapper=`collegue-panel-wrapper`
     &includeTVs=`1`
     &processTVs=`1`
     &sortby=`menuindex`
     &sortdir=`ASC`
     &depth=`1`
-    &limit=`1`
+    &limit=`0`
 ]]
 
 [[!getResources?
@@ -18,6 +19,7 @@
     &sortby=`menuindex`
     &sortdir=`ASC`
     &depth=`1`
+    &limit=`0`
 ]]
 
 [[!getResources?
@@ -28,4 +30,5 @@
     &sortby=`menuindex`
     &sortdir=`ASC`
     &depth=`1`
+    &limit=`0`
 ]]

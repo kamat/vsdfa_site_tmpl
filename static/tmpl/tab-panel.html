@@ -33,6 +33,7 @@
                                 &showHidden=`1`
                                 &sortby=`menuindex`
                                 &sortdir=`ASC`
+                                &limit=`0`
                             ]]
                         </ul>
                         <div class="tab-content">
@@ -43,6 +44,7 @@
                                 &includeContent=`1`
                                 &sortby=`menuindex`
                                 &sortdir=`ASC`
+                                &limit=`0`
                             ]]
                         </div>
                     </div>
@@ -63,9 +65,36 @@
         <script>
             $( document ).ready(function() {
                 if (location.hash) {
-                    $('.child_tabs .nav a[href="' + location.hash + '"]').tab('show');
+                    hashes = location.hash.split(',');
+                    active_tab = hashes[0];
+                    
+                    // Show tab
+                    if (active_tab && $('.child_tabs .nav a[href="' + active_tab + '"]').size() > 0) {
+                        $('.child_tabs .nav a[href="' + active_tab + '"]').tab('show');
+                        anchor = hashes[1];
+                        console.log('Show tab ' + active_tab);
+                    } else if (active_tab) {
+                        $('.child_tabs .nav a:first').tab('show');
+                        anchor = active_tab.replace("#","");
+                        console.log('Tab not found -- ' + active_tab);
+                    } else {
+                        $('.child_tabs .nav a:first').tab('show');
+                        anchor = false;
+                        console.log('Show first tab ');
+                    }
+                    
+                    // Scroll
+                    if (anchor && $('[id="' + anchor + '"]').size() > 0) {
+                        console.log('Scroll to ' + anchor);
+                        $('html, body').animate({
+                            scrollTop: $('[id="' + anchor + '"]').offset().top
+                        }, 2000);
+                    } else {
+                        console.log('Anchor not found -- ' + anchor);
+                    };
                 } else {
                     $('.child_tabs .nav a:first').tab('show');
+                    console.log('Show first tab only');
                 }
             });
         </script>

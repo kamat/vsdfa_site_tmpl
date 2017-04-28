@@ -1,7 +1,9 @@
-[[FormIt?
+[[!FormIt?
     &hooks=`recaptchav2,email,FormItSaveForm`
     &recaptchaTheme=`dark`
     &recaptchaJs=`{size: "compact"}`
+    &emailFrom=`noreply@molochnoe.ru`
+    &emailFromName=`Сайт Вологодской ГМХА`
     &emailTo=`prcom@molochnoe.ru`
     &emailSubject=`Отправка формы "Вопрос приёмной комиссии"`
     &emailTpl=`emailORprcom`

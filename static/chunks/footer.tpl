@@ -37,4 +37,8 @@
     <!-- 
         Made by Kama
     -->
+    
+    <!-- TEST AREA
+        [[!testCookieAndSession]]
+    -->
 </div>

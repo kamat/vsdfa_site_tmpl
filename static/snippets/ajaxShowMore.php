@@ -101,6 +101,17 @@ switch ($type) {
             'tplWrapper' => '@INLINE <div class="page clearfix" data-page="'.$page.'" data-offset="'.$newOffset.'">[[+output]]</div>'
         );
         break;
+    case 'photo':
+        $config = array(
+            'tpl' => 'rubric',
+            'limit' => $limit,
+            'offset' => $offset,
+            'parents' => '218',
+            'where' => '{"template:=":26}',
+            'includeTVs' => true,
+            'tplWrapper' => '@INLINE <div class="page clearfix" data-page="'.$page.'" data-offset="'.$newOffset.'">[[+output]]</div>'
+        );
+        break;
     default:
         return '';
         break;

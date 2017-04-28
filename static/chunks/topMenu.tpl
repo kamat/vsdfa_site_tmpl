@@ -1,3 +1,4 @@
+[[!ovz-menu? &tpl=`ovz-menu`]]
 <nav class="navbar navbar-vsdfa top-menu">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-top-menu" aria-expanded="false">
@@ -10,7 +11,7 @@
             [[Wayfinder@MainMenu? &startId=`16` ]]
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li itemprop="Copy" class="ovz-mode-contrast"><a href="#" title="Версия для слабовидящих"><i class="glyphicon glyphicon-eye-open"></i></a></li>
+            <li itemprop="Copy" class="ovz-mode-contrast"><a href="[[~[[*id]]]]?theme=bw" title="Версия для слабовидящих"><i class="glyphicon glyphicon-eye-open"></i></a></li>
             <!-- li itemprop="Copy" class="ovz-mode-normal hide"><a href="#" title="Нормальная версия"><i class="glyphicon glyphicon-eye-open"></i></a></li -->
             <li><p class="navbar-text">12+</p></li>
             <li role="presentation" class="dropdown">

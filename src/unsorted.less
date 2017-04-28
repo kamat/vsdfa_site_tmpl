@@ -224,12 +224,8 @@ body > .main {
     &:extend(.text-center);
     transition: all .2s ease-in-out;
     &:active, &:hover {
-        background-color: @my-gray-lighter;
-        border-radius: 10px;
-        padding: 5px;
         img {
             transform: scale(1.2);
-            margin-bottom: 10px;
         }
     }
     > a {
@@ -247,16 +243,12 @@ body > .main {
     }
     &.bordered {
         border-radius: 40px 10px;
-        padding-bottom: 10px;
-        padding-top: 5px;
-        background-color: @my-gray-lighter;
-        margin: 5px;
+        padding: 10px 15px;
+        background-color: darken(@body-bg, 5%);
         box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
         &:active, &:hover {
             border-radius: 40px 10px;
-            padding-bottom: 10px;
-            padding-top: 5px;
-            background-color: darken(@my-gray-lighter, 3%);
+            //background-color: darken(@body-bg, 10%);
         }
     }
 }

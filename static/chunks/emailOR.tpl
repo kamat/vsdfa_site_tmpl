@@ -5,4 +5,4 @@ email: [[+email]]
 Адрес: [[+address]]
 
 Текст:
-[[+message]]
+[[+question]]

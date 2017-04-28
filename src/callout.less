@@ -1,0 +1,51 @@
+.bs-callout-mixin(@color) {
+    border-left-color: @color;
+    h1, h2, h3, h4, h5, h6 {
+        color: @color;
+    }
+}
+
+.bs-callout {
+	padding: 20px;
+    margin: 20px 0;
+    border: 1px solid @my-gray-light;
+    border-left-width: 5px;
+    border-radius: 3px;
+	&+.bs-callout {
+		margin-top: -5px;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+    p:last-child {
+        margin-bottom: 0;
+    }
+	code {
+		border-radius: 3px;
+	}
+	&.noborder {
+		border-width: 0 0 0 5px;
+		border-radius: 0;
+	}
+}
+
+.bs-callout-primary {
+    .bs-callout-mixin(@brand-primary);
+}
+
+.bs-callout-danger {
+    .bs-callout-mixin(@brand-danger);
+}
+
+.bs-callout-warning {
+    .bs-callout-mixin(@brand-warning);
+}
+
+.bs-callout-info {
+    .bs-callout-mixin(@brand-info);
+}
+
+.bs-callout-success {
+    .bs-callout-mixin(@brand-success);
+}

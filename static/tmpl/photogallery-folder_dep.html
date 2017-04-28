@@ -23,30 +23,20 @@
             <!-- /BREADCRUMBS -->
 
             <div class="row">
-                <div class="col-lg-9 col-md-8 col-sm-7">
+                <div class="col-sm-12">
                     <h3 class="pagetitle">[[*pagetitle]]</h3>
                     <div class="content">[[*content]]</div>
             
-                    [[getResources?
-                        &parents=`[[*id]]`
+                    [[!getResources?
+                        &parents=`218`
                         &limit=`0`
                         &depth=`0`
-                        &tpl=`folder-item`
-                        &tplWrapper=`@INLINE <div class="folders clearfix">[[+output]]</div>`
-                        &where=`{"template:=":23}`
+                        &tpl=`rubric_dep`
+                        &tplWrapper=`@INLINE <div class="rubrics clearfix">[[+output]]</div>`
+                        &where=`{"template:=":26}`
                         &includeTVs=`1`
                     ]]
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-5">
-                    <h3 class="pagetitle">Рубрики</h3>
-                    [[Wayfinder?
-                        &startId=`218`
-                        &level=`1`
-                        &where=`{"template:=":26}`
-                        &outerClass=`nav nav-vsdfa nav-stacked bordered`
-                        &innerClass=``
-                        &parentClass=``
-                    ]]
+
                 </div>
             </div>
         </div>
@@ -57,5 +47,6 @@
         <!-- /FOOTER -->
 
         [[$footerJs]]
+        <script src="assets/templates/kama/js/gallery.js"></script>
     </body>
 </html>

@@ -1,5 +1,6 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script -->
+<script src="assets/templates/kama/js/jquery_1.12.4.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="assets/templates/kama/js/bootstrap.min.js"></script>
@@ -36,4 +37,25 @@ $(document).ready(function(){
         return false;
     });
 });
+</script>
+
+<!-- OWL carousel -->
+[[$owl]]
+
+<!-- RPList -->
+<script>
+    $(document).ready(function(){
+        $('.rplist').each(function(){
+            var el = this;
+            var opts = $( el ).data();
+            $.post('rp', opts)
+             .done(function( data ){
+                 console.log('RPList success');
+                 $( el ).html( data );
+             })
+             .fail(function(){
+                 console.log('RPList error');
+             });
+        });
+    });
 </script>

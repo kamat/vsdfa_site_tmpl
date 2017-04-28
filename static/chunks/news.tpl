@@ -16,11 +16,11 @@
             Пресса о нас
           </a>
         </li>
-        <!-- li role="presentation">
+        <li role="presentation">
           <a href="#photo" aria-controls="photo" role="tab" data-toggle="tab">
             Фото
           </a>
-        </li -->
+        </li>
         <li role="presentation">
           <a href="#video" aria-controls="video" role="tab" data-toggle="tab">
             Видео

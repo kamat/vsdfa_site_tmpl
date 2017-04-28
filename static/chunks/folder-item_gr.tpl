@@ -1,0 +1,10 @@
+[[!getResources?
+    &parents=`[[+id]]`
+    &depth=`1`
+    &limit=`1`
+    &sortbyTV=`cover`
+    &tpl=`folder-item`
+    &includeTVs=`1`
+    &includeContent=`1`
+    &tvPrefix=`vt.`
+]]

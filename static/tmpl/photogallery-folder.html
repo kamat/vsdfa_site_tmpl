@@ -27,11 +27,11 @@
                     <h3 class="pagetitle">[[*pagetitle]]</h3>
                     <div class="content">[[*content]]</div>
             
-                    [[getResources?
+                    [[!getResources?
                         &parents=`[[*id]]`
                         &limit=`0`
                         &depth=`0`
-                        &tpl=`folder-item`
+                        &tpl=`folder-item_gr`
                         &tplWrapper=`@INLINE <div class="folders clearfix">[[+output]]</div>`
                         &where=`{"template:=":23}`
                         &includeTVs=`1`
@@ -53,7 +53,7 @@
                         &startId=`218`
                         &level=`1`
                         &where=`{"template:=":26}`
-                        &outerClass=`nav nav-vsdfa nav-stacked`
+                        &outerClass=`nav nav-vsdfa nav-stacked bordered`
                         &innerClass=``
                         &parentClass=``
                     ]]

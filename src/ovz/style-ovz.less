@@ -18,7 +18,7 @@
 
 // Links and buttons
 a,
-.btn-menu,
+.btn-menu, .btn-primary, .label-danger, .btn-default,
 .open .dropdown-menu > li > a,
 .frame a,
 .frame .image .tag,
@@ -42,12 +42,55 @@ a,
   }
 }
 
+.table>tbody>tr.warning>td,
+.table>tbody>tr.warning>th,
+.table>tbody>tr>td.warning,
+.table>tbody>tr>th.warning,
+.table>tfoot>tr.warning>td,
+.table>tfoot>tr.warning>th,
+.table>tfoot>tr>td.warning,
+.table>tfoot>tr>th.warning,
+.table>thead>tr.warning>td,
+.table>thead>tr.warning>th,
+.table>thead>tr>td.warning,
+.table>thead>tr>th.warning,
+.table>tbody>tr.active>td,
+.table>tbody>tr.active>th,
+.table>tbody>tr>td.active,
+.table>tbody>tr>th.active,
+.table>tfoot>tr.active>td,
+.table>tfoot>tr.active>th,
+.table>tfoot>tr>td.active,
+.table>tfoot>tr>th.active,
+.table>thead>tr.active>td,
+.table>thead>tr.active>th,
+.table>thead>tr>td.active,
+.table>thead>tr>th.active {
+    background-color: @bg;
+}
+
+legend, pre,
+.well,
+.table-striped > tbody > tr:nth-of-type(odd),
+.table-hover > tbody > tr:hover,
+.panel-default,
+.panel-default .panel-heading,
+.panel-default .panel-body,
+.panel-success,
+.panel-success .panel-heading,
+.panel-success .panel-body,
+.panel-info,
+.panel-info .panel-heading,
+.panel-info .panel-body,
+.list-group-item,
 .breadcrumb,
 .pagetitle,
 .dropdown-menu,
 .person-card .person-contacts abbr,
 .footer,
 .footer address,
+.frame.event .date .day, .frame.event .date .month,
+.frame.event .description:hover, .frame.event .description:focus,
 .frame a:hover .title,
 .frame a:focus .title {
     color: @fg;
@@ -55,6 +98,31 @@ a,
 }
 
 // Borders
+legend, blockquote, hr,
+.table-bordered,
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th,
+.well, .btn-primary, .label-danger, .btn-default,
+.img-thumbnail,
+abbr[title], abbr[data-original-title],
+.table-bordered,
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > td,
+hr,
+.panel-default,
+.panel-default .panel-heading,
+.panel-default .panel-body,
+.panel-success,
+.panel-success .panel-heading,
+.panel-success .panel-body,
+.list-group-item,
+.panel-info,
+.panel-info .panel-heading,
+.panel-info .panel-body,
 .footer .menu > li.first > a,
 .nav-vsdfa > li.active > a {
   border-color: @fg;
@@ -62,6 +130,10 @@ a,
 
 .footer {
   border-top: 2px solid @fg;
+}
+
+.frame.event .date {
+    border: 1px solid @fg;
 }
 
 .main-menu {

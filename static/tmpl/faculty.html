@@ -25,54 +25,18 @@
                 <div class="col-lg-9 col-md-8 col-sm-7">
                     <h3 class="pagetitle">[[*pagetitle]]</h3>
                     [[!getResources@EmployeesList? &limit=`1` &tpl=`employee_gr` &depth=`1`]]
-                    <ul class="nav nav-vsdfa" role="tablist">
-                        <li role="presentation" class="active">
-                            <a href="#about" aria-controls="about" role="tab" data-toggle="tab">
-                                О факультете
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#history" aria-controls="history" role="tab" data-toggle="tab">
-                                История
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#edu-wrk" aria-controls="edu-wrk" role="tab" data-toggle="tab">
-                                Воспитательная работа
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#chairs" aria-controls="chairs" role="tab" data-toggle="tab">
-                                Кафедры
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="about">
-                            [[*content]]
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="history">
-                            [[*history]]
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="edu-wrk">
-                            [[*edu-wrk]]
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="chairs">
-                            [[Wayfinder?
-                                &startId=`[[*id]]`
-                                &level=`1`
-                                &outerClass=`nav nav-vsdfa nav-stacked`
-                                &innerClass=`nav`
-                                &where=`{"template:=": "19"}`
-                            ]]
-                        </div>
-                    </div>
+                    [[If?
+                        &subject=`[[*showTabs]]`
+                        &operand=`1`
+                        &then=`[[$facultyTabs]]`
+                        &else=`<div class="content">[[*content]]</div>`
+                    ]]
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-5">
                     [[Wayfinder?
                         &startId=`[[*parent]]`
                         &level=`2`
-                        &outerClass=`nav nav-vsdfa nav-stacked`
+                        &outerClass=`nav nav-vsdfa nav-stacked bordered`
                         &innerClass=`nav`
                         &parentClass=`parent`
                         &where=`{"template:!=": "19"}`

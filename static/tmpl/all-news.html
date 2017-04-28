@@ -41,14 +41,25 @@
                         Архив
                     </a>`]]
                     
-                    <h3>Категории</h3>
-                    <ul class="nav nav-pills nav-stacked">
-                        [[!getCategories]]
-                    </ul>
+                    [[*mediaType:is=`photo`:then=`
+                        <h3 class="pagetitle">Рубрики</h3>
+                        [[Wayfinder?
+                            &startId=`[[*id]]`
+                            &level=`1`
+                            &where=`{"template:=":26}`
+                            &outerClass=`nav nav-vsdfa nav-stacked bordered`
+                            &innerClass=``
+                            &parentClass=``
+                        ]]
+                        `:else=`
+                        <h3>Категории</h3>
+                        <ul class="nav nav-pills nav-stacked bordered">
+                            [[!getCategories]]
+                        </ul>
                     
-                    <h3>Календарь</h3>
-                    <div class="calendar">
-                    </div>
+                        <h3>Календарь</h3>
+                        <div class="calendar">
+                        </div>`]]
                 </div>
             </div>
         </div>

@@ -71,7 +71,7 @@
                                             <i class="glyphicon glyphicon-file"></i>
                                         </abbr>
                                         <div class="person-info">
-                                            <a href="[[*document]]">
+                                            <a href="[[*document]]" target="_blank">
                                                 Положение
                                             </a>
                                         </div>

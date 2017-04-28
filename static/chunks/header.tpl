@@ -1,11 +1,11 @@
-<div class="container-fluid header"><div class="snow-container" style="height: 190px;"><div id="snow"></div></div>
+<div class="container-fluid header">
     <div class="row">
         <div class="col-lg-7 col-md-7 col-sm-3 first hidden-xs">
             <div class="logo pull-left">
-                <a href="#"></a>
+                <a href="/"></a>
             </div>
             <div class="name hidden-sm pull-left">
-                <a href="#"></a>
+                <a href="/"></a>
             </div>
         </div>
         <div class="col-lg-2 col-lg-offset-1 col-md-3 col-md-offset-0 col-sm-4 col-xs-6 menu">

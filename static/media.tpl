@@ -4,7 +4,15 @@
     <div class="raise">
         <a href="[[~44]]" class="upright">Все новости &gt;</a>
         <div class="owl-carousel" data-items-custom="[ [0, 1], [700, 2], [1050, 3], [1330, 4], [1600, 5] ]">
-            [[!getResources@fpRowED? &parents=`44` &tpl=`tagged-frame`]]
+            [[!getResources?
+                &parents=`44`
+                &limit=`12`
+                &tpl=`tagged-frame`
+                &includeTVs=`1`
+                &processTVs=`0`
+                &prepareTVs=`1`
+                &includeContent=`1`
+            ]]
         </div>
     </div>
     <hr>
@@ -13,13 +21,17 @@
     <div class="raise">
         <a href="[[~188]]" class="upright">Все анонсы &gt;</a>
         <div class="row">
-            [[!getResources@fpRowED?
+            [[!getResources?
                 &parents=`188`
                 &tpl=`event-frame`
                 &limit=`6`
                 &tvFilters=`endDate>>[[!getDate:date=`%Y-%m-%d`? &offset=`-1 day`]]`
                 &sortbyTV=`startDate`
                 &sortdirTV=`ASC`
+                &includeTVs=`1`
+                &processTVs=`0`
+                &prepareTVs=`1`
+                &includeContent=`1`
             ]]
         </div>
     </div>
@@ -44,14 +56,14 @@
     <h3>Фото</h3>
     <div class="raise">
         <a href="[[~218]]" class="upright">Все фотографии &gt;</a>
-        <div class="owl-carousel" data-items-custom="[ [0, 1], [700, 2], [1000, 3], [1300, 4], [1600, 5] ]">
+        <div class="owl-carousel folders" data-items-custom="[ [0, 1], [700, 2], [1000, 3], [1300, 4], [1600, 5] ]">
             [[!getResources?
                 &parents=`218`
-                &tpl=`image-frame`
+                &tpl=`folder-item`
                 &includeTVs=`1`
                 &limit=`12`
                 &depth=`10`
-                &where=`{"template:=":24}`
+                &where=`{"template:=":23}`
             ]]
         </div>
     </div>

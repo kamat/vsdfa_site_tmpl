@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <div class="panel-title" itemprop="fio">
-            [[+pagetitle]]
+            <a href="[[~[[+id]]]]">[[+pagetitle]]</a>
         </div>
     </div>
     <div class="panel-body">

@@ -7,6 +7,7 @@
             &limit=`1`
             &includeTVs=`1`
             &sortbyTV=`cover`
+            &includeTVList=`image,thumbType,thumbPlace`
         ]]
         <span class="title">[[+pagetitle]]</span>
     </a>

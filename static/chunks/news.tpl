@@ -39,7 +39,7 @@
         <div role="tabpanel" class="tab-pane raise active" id="news">
             <a href="[[~44]]" class="upright">Все новости &gt;</a>
             <div class="owl-carousel" data-items-custom="[ [0, 1], [700, 2], [1000, 3], [1300, 4], [1600, 5] ]">
-                [[!getResources@fpRowED? &parents=`44` &tpl=`tagged-frame`]]
+                [[!getResources@fpRowED? &parents=`44` &limit=`12` &tpl=`tagged-frame` &includeTVList=`category`]]
             </div>
         </div>
         <!-- Events tab -->
@@ -53,6 +53,7 @@
                     &tvFilters=`endDate>>[[!getDate:date=`%Y-%m-%d`? &offset=`-1 day`]]`
                     &sortbyTV=`startDate`
                     &sortdirTV=`ASC`
+                    &includeTVList=`startDate`
                 ]]
             </div>
         </div>
@@ -67,6 +68,7 @@
                     &limit=`12`
                     &sortbyTV=`eventDate`
                     &sortdirTV=`DESC`
+                    &includeTVList=`category`
                 ]]
             </div>
         </div>
@@ -74,14 +76,15 @@
         <!-- PHOTO tab -->
         <div role="tabpanel" class="tab-pane raise" id="photo">
             <a href="[[~218]]" class="upright">Все фотографии &gt;</a>
-            <div class="owl-carousel" data-items-custom="[ [0, 1], [700, 2], [1000, 3], [1300, 4], [1600, 5] ]">
+            <div class="owl-carousel folders" data-items-custom="[ [0, 1], [700, 2], [1000, 3], [1300, 4], [1600, 5] ]">
                 [[!getResources?
                     &parents=`218`
-                    &tpl=`image-frame`
+                    &tpl=`folder-item`
                     &includeTVs=`1`
                     &limit=`12`
                     &depth=`10`
-                    &where=`{"template:=":24}`
+                    &where=`{"template:=":23}`
+                    &includeTVList=`image`
                 ]]
             </div>
         </div>
@@ -98,6 +101,7 @@
                     &where=`{"template:=":25}`
                     &sortbyTV=`eventDate`
                     &sortdirTV=`DESC`
+                    &includeTVList=`category`
                 ]]
             </div>
         </div>

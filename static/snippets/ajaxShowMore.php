@@ -29,6 +29,7 @@ switch ($type) {
             'where' => '{"template:=":6}',
             'tvFilters' => implode(',', $filterTV),
             'includeTVs' => true,
+            'includeTVList' => 'category',
             'sortbyTV' => 'eventDate',
             'sortdirTV' => 'DESC',
             'tplWrapper' => '@INLINE <div class="page clearfix" data-page="'.$page.'" data-offset="'.$newOffset.'">[[+output]]</div>'

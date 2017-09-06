@@ -8,7 +8,7 @@
         <div class="person-card">
             <div class="row">
                 <div class="col-sm-3 col-md-2">
-                    <img src="[[pthumb? &input=`[[+tv.photo]]` &options=`h=200&w=150&zc=t`]]" class="img-thumbnail" title="[[+longtitle]]" alt="[[+longtitle]]">
+                    <img src="[[pthumb? &input=`[[getField? &id=`[[+id]]` &field=`photo`]]` &options=`h=200&w=150&zc=t`]]" class="img-thumbnail" title="[[+longtitle]]" alt="[[+longtitle]]">
                 </div>
                 <div class="col-sm-9 col-md-10">
                     <div class="row">

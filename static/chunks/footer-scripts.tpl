@@ -6,6 +6,7 @@
 <script src="assets/templates/kama/js/bootstrap.min.js"></script>
 <script src="assets/templates/kama/js/holder.min.js"></script>
 <script src="assets/templates/kama/js/jquery.fancybox.pack.js"></script>
+<script src="assets/templates/kama/js/jquery.lazyload.js"></script>
 
 <!-- FancyBox settings -->
 <script>
@@ -56,6 +57,15 @@ $(document).ready(function(){
              .fail(function(){
                  console.log('RPList error');
              });
+        });
+    });
+</script>
+
+<!-- LazeLoad -->
+<script>
+    $(document).ready(function(){
+        $("img.lazy").lazyload({
+            effect : "fadeIn"
         });
     });
 </script>

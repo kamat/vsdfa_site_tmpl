@@ -1,5 +1,5 @@
 [[!ovz-menu? &tpl=`ovz-menu`]]
-<nav class="navbar navbar-vsdfa top-menu">
+<nav class="navbar navbar-vsdfa top-menu hidden-xs">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-top-menu" aria-expanded="false">
             <small>СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ</small>

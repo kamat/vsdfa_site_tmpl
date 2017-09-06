@@ -21,11 +21,11 @@
                             <dl>
                                 <dt>Должность:</dt>
                                 <dd>[[*position:striptags=``]]</dd>
-                                [[*degree:notempty:then=`
+                                [[*degree:notempty=`
                                     <dt>Ученая степень</dt>
                                     <dd>[[*degree:striptags=``]]</dd>
                                 `]]
-                                [[*rank:notempty:then=`
+                                [[*rank:notempty=`
                                     <dt>Ученое звание</dt>
                                     <dd>[[*rank:striptags=``]]</dd>
                                 `]]

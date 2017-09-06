@@ -1,7 +1,7 @@
 <div class="frame">
     <a href="[[~[[+id]]]]" [[+link_attributes]]>
         <div class="image">
-            <img src="[[pthumb? &input=`[[+tv.thumbnail]]` &options=`h=180&w=270&zc=c`]]" class="img-responsive">
+            <img src="[[pthumb? &input=`[[getField? &id=`[[+id]]` &field=`thumbnail`]]` &options=`h=180&w=270&zc=c`]]" class="img-responsive">
             <span class="tag">[[+tv.category:getCategory]]</span>
         </div>
         <div class="date">

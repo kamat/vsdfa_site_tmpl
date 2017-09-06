@@ -12,12 +12,19 @@ $('[data-folder]').click(function(e){
         'limit': 0,
         'includeTVs': true
     }).done(function( data ){
-        $( folder_div ).after('<div class="item-content" data-folder="' + folder_id + '">' + data + '</div>');
+        var item = document.createElement('div');
+        $( item ).addClass('item-content').attr('data-folder', folder_id).html( data );
+        $( folder_div ).after( item );
+        
         $( elem ).off('click');
         $( elem ).click(function(){
             e.preventDefault();
-            $('.item-content[data-folder=' + folder_id + ']').toggleClass('hidden');
+            $( item ).toggle('slow');
             return false;
+        });
+
+        $("img.lazy").lazyload({
+            effect : "fadeIn"
         });
     });
 });

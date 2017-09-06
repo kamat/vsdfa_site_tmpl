@@ -2,7 +2,7 @@
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-ovz-menu" aria-expanded="false">
             <span>Цветовые схемы</span>
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">Открыть меню</span>
         </button>
     </div>
     <div class="collapse navbar-collapse" id="nav-ovz-menu">
